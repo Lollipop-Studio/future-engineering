@@ -1,8 +1,19 @@
 buildscript {
     repositories {
-        maven { url = 'https://files.minecraftforge.net/maven' }
+        mavenLocal()
+        maven {
+            name = "aliyun-public"
+            url = "http://maven.aliyun.com/nexus/content/groups/public/"
+        }
         jcenter()
-        mavenCentral()
+        maven {
+            name = "lss233-repo"
+            url = "https://lss233.littleservice.cn/repositories/minecraft"
+        }
+        maven {
+            name = "gradle-plugin"
+            url = "https://maven.aliyun.com/repository/gradle-plugin"
+        }
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
