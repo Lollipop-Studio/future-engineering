@@ -1,0 +1,18 @@
+[
+  {
+    "modid": "mods.fe",
+    "name": "Future Engineering",
+    "description": "none",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "konara.moe",
+    "updateUrl": "",
+    "authorList": [
+      "Konara"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
