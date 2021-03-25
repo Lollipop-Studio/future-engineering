@@ -1,7 +1,9 @@
 package moe.konara.mods.fe;
 
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -17,7 +19,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 )
 public class FE {
 
-    public static final String MOD_ID = "mods.fe";
+    public static final String MOD_ID = "fe";
     public static final String MOD_NAME = "Future Engineering";
     public static final String VERSION = "1.0-SNAPSHOT";
 
@@ -110,4 +112,11 @@ public class FE {
 
     }
     */
+    public static final CreativeTabs TAB_FE= new CreativeTabs(MOD_ID) {
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(ItemRegistryHandler.copper_ingot);
+        }
+    };
+
 }

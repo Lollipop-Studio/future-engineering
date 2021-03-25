@@ -1,6 +1,6 @@
 [
   {
-    "modid": "mods.fe",
+    "modid": "fe",
     "name": "Future Engineering",
     "description": "none",
     "version": "${version}",
