@@ -24,7 +24,7 @@ public class ItemRegistryHandler {
         IForgeRegistry<Item> registry = event.getRegistry();
         registry.register(copper_ingot);
     }
-    @SubscribeEvent //监听net.minecraftforge.client.event.ModelRegistryEvent
+    @SubscribeEvent
     @SideOnly(Side.CLIENT)
     public static void onModelRegistry(ModelRegistryEvent event){
         ModelLoader.setCustomModelResourceLocation(copper_ingot, 0, new ModelResourceLocation(Objects.requireNonNull(copper_ingot.getRegistryName()),"inventory"));
