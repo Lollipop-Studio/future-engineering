@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
+import moe.konara.mods.fe.Utils.*;
 @Mod(
         modid = FE.MOD_ID,
         name = FE.MOD_NAME,
@@ -114,12 +114,6 @@ public class FE {
 
     }
     */
-    public static final CreativeTabs TAB_FE= new CreativeTabs(MOD_ID+".main") {
-        @Override
-        @SideOnly(Side.CLIENT)
-        public ItemStack createIcon() {
-            return new ItemStack(ItemRegistryHandler.copper_ingot);
-        }
-    };
+
 
 }

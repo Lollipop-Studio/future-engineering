@@ -21,13 +21,14 @@ buildscript {
 }
 
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'idea'
 
 group = 'moe.konara'
 version = '1.0-SNAPSHOT'
-archivesBaseName = 'mods.fe'
+archivesBaseName = 'FE'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
-
+idea.module.inheritOutputDirs = true
 minecraft {
     // The mappings can be changed at any time, and must be in the following format.
     // snapshot_YYYYMMDD   Snapshot are built nightly.
@@ -52,7 +53,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                untitled {
+                fe {
                     source sourceSets.main
                 }
             }
@@ -68,7 +69,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                untitled {
+                fe {
                     source sourceSets.main
                 }
             }
