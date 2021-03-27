@@ -7,7 +7,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class CreativeInventory {
-    public static final CreativeTabs TAB_MAIN= new net.minecraft.creativetab.CreativeTabs(FE.MOD_ID+".main") {
+    public static final CreativeTabs TAB_MAIN = new net.minecraft.creativetab.CreativeTabs(FE.MOD_ID+".main") {
         @Override
         @SideOnly(Side.CLIENT)
         public ItemStack createIcon() {
