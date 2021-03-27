@@ -1,7 +1,7 @@
-package moe.konara.mods.fe.Blocks.Ores;
+package moe.konara.fe.Blocks.Ores;
 
-import moe.konara.mods.fe.FE;
-import moe.konara.mods.fe.Utils.CreativeInventory;
+import moe.konara.fe.FE;
+import moe.konara.fe.Utils.CreativeInventory;
 import net.minecraft.block.*;
 import net.minecraft.block.material.*;
 

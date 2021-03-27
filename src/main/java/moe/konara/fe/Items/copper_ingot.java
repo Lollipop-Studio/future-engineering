@@ -1,7 +1,7 @@
-package moe.konara.mods.fe.Items;
+package moe.konara.fe.Items;
 
-import moe.konara.mods.fe.FE;
-import moe.konara.mods.fe.Utils.CreativeInventory;
+import moe.konara.fe.FE;
+import moe.konara.fe.Utils.CreativeInventory;
 import net.minecraft.item.Item;
 
 public class copper_ingot extends Item{

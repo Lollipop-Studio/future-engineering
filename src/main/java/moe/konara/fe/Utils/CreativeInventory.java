@@ -1,6 +1,6 @@
-package moe.konara.mods.fe.Utils;
+package moe.konara.fe.Utils;
 
-import moe.konara.mods.fe.FE;
+import moe.konara.fe.FE;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
