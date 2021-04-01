@@ -8,7 +8,7 @@ import net.minecraft.block.material.*;
 public class copper_ore extends Block {
     public copper_ore()
     {
-        super(Material.ROCK);
+        super(Material.IRON);
         this.setTranslationKey(FE.MOD_ID + ".copper_ore");
         this.setRegistryName("copper_ore");
         this.setCreativeTab(CreativeInventory.TAB_MAIN);

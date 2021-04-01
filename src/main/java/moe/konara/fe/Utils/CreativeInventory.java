@@ -11,7 +11,7 @@ public class CreativeInventory {
         @Override
         @SideOnly(Side.CLIENT)
         public ItemStack createIcon() {
-            return new ItemStack(ItemRegistryHandler.copper_ingot);
+            return new ItemStack(ItemRegistryHandler.COPPER_INGOT);
         }
     };
 }
