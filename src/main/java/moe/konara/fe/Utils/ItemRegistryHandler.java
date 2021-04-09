@@ -18,8 +18,7 @@ import java.util.Objects;
 
 @Mod.EventBusSubscriber
 public class ItemRegistryHandler {
-    public static final copper_ingot COPPER_INGOT = new copper_ingot();
-    public static final ItemBlock ITEM_COPPER_ORE = withRegistryName(new ItemBlock(BlockRegistryHandler.copper_ore));
+
     public static ItemBlock withRegistryName(ItemBlock item){
         item.setRegistryName(Objects.requireNonNull(item.getBlock().getRegistryName()));
         return item;
@@ -27,8 +26,8 @@ public class ItemRegistryHandler {
     @SubscribeEvent
     public static void onRegistry(RegistryEvent.Register<Item> event) {
         IForgeRegistry<Item> registry = event.getRegistry();
-        registry.register(COPPER_INGOT);
-        registry.register(ITEM_COPPER_ORE);
+        registry.register(IBList.COPPER_INGOT);
+        registry.register(IBList.ITEM_COPPER_ORE);
     }
     @SideOnly(Side.CLIENT) private static void registerModel (Item item){
         ModelResourceLocation modelResourceLocation = new ModelResourceLocation(Objects.requireNonNull(item.getRegistryName()),"inventory");
@@ -38,7 +37,7 @@ public class ItemRegistryHandler {
     @SubscribeEvent
     @SideOnly(Side.CLIENT)
     public static void onModelRegistry(ModelRegistryEvent event){
-        registerModel(COPPER_INGOT);
-        registerModel(ITEM_COPPER_ORE);
+        registerModel(IBList.COPPER_INGOT);
+        registerModel(IBList.ITEM_COPPER_ORE);
     }
 }

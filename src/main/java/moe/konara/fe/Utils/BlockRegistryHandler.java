@@ -9,10 +9,10 @@ import net.minecraftforge.registries.IForgeRegistry;
 @Mod.EventBusSubscriber
 public class BlockRegistryHandler
 {
-    public static final copper_ore copper_ore = new copper_ore();
+
     @SubscribeEvent public static void onRegistry(RegistryEvent.Register<Block> event)
     {
         IForgeRegistry<Block> registry = event.getRegistry();
-        registry.register(copper_ore);
+        registry.register(IBList.copper_ore);
     }
 }

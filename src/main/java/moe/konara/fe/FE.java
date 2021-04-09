@@ -1,7 +1,9 @@
 package moe.konara.fe;
 
+import moe.konara.fe.Generators.OreGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -42,6 +44,7 @@ public class FE {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
 
+
     }
 
     /**
@@ -49,6 +52,7 @@ public class FE {
      */
     @Mod.EventHandler
     public void postinit(FMLPostInitializationEvent event) {
+        GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
 
     }
 
