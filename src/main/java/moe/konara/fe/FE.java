@@ -1,6 +1,8 @@
 package moe.konara.fe;
 
 import moe.konara.fe.Generators.OreGenerator;
+import moe.konara.fe.Utils.OreDictionaryLoader;
+import moe.konara.fe.recipe.Recipes;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -34,7 +36,7 @@ public class FE {
      */
     @Mod.EventHandler
     public void preinit(FMLPreInitializationEvent event) {
-
+        new OreDictionaryLoader(event);
     }
 
     /**
@@ -42,7 +44,7 @@ public class FE {
      */
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-
+        new Recipes();
 
     }
 
