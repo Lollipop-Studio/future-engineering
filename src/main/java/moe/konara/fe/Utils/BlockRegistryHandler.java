@@ -1,6 +1,5 @@
 package moe.konara.fe.Utils;
 
-import moe.konara.fe.Blocks.Ores.copper_ore;
 import net.minecraft.block.Block;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;

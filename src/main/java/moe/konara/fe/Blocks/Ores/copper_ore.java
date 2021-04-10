@@ -4,11 +4,6 @@ import moe.konara.fe.FE;
 import moe.konara.fe.Utils.CreativeInventory;
 import net.minecraft.block.*;
 import net.minecraft.block.material.*;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.item.Item;
-
-import javax.annotation.Nonnull;
-import java.util.Random;
 
 public class copper_ore extends Block {
     public copper_ore()

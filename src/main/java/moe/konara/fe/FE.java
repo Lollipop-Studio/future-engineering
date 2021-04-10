@@ -3,7 +3,6 @@ package moe.konara.fe;
 import moe.konara.fe.Generators.OreGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
