@@ -29,7 +29,8 @@ public class ItemRegistryHandler {
         registry.register(IBList.COPPER_INGOT);
         registry.register(IBList.ITEM_COPPER_ORE);
     }
-    @SideOnly(Side.CLIENT) private static void registerModel (Item item){
+    @SideOnly(Side.CLIENT)
+    private static void registerModel (Item item){
         ModelResourceLocation modelResourceLocation = new ModelResourceLocation(Objects.requireNonNull(item.getRegistryName()),"inventory");
         ModelLoader.setCustomModelResourceLocation(item,0, modelResourceLocation);
     }
