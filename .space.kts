@@ -4,14 +4,12 @@
 * For more info, see https://www.jetbrains.com/help/space/automation.html
 */
 
-job("Build Jar") {
-    container(displayName = "Build Jar", image = "ubuntu") {
-    	shellScript {
-        	content = """
-            	echo Build Start
-            	./gradlew build
-                echo Build End
-            """
+job("Build and run tests") {
+    container(displayName = "Run gradle build", image = "openjdk:8") {
+        kotlinScript { api ->
+            // here can be your complex logic
+            api.gradlew("build")
+            api.gradlew("publish")
         }
     }
 }
