@@ -5,5 +5,5 @@
 */
 
 job("Build Jar") {
-    gradlew("openjdk:11", "build")
+    gradlew("openjdk:8", "build")
 }
