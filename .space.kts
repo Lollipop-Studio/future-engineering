@@ -5,13 +5,5 @@
 */
 
 job("Build Jar") {
-    container(displayName = "Build Jar", image = "ubuntu") {
-    	shellScript {
-        	content = """
-            	echo Build Start
-            	./gradlew build
-                echo Build End
-            """
-        }
-    }
+    gradlew("openjdk:11", "build")
 }
