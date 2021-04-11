@@ -9,7 +9,7 @@ job("Build Jar") {
     	shellScript {
         	content = """
             	echo Build Start
-            	.\gradlew build
+            	./gradlew build
                 echo Build End
             """
         }
