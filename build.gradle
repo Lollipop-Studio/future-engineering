@@ -144,8 +144,8 @@ publishing {
             credentials {
                 // Automation has a special account for authentication in Space
                 // account credentials are accessible via env vars
-                username = "$username"
-                password = "$password"
+                username = "Konara"
+                password = "eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiIxc0lJdzExaE9zSEgiLCJhdWQiOiJjaXJjbGV0LXdlYi11aSIsIm9yZ0RvbWFpbiI6ImJvb2xpbmciLCJuYW1lIjoiS29uYXJhIiwiaXNzIjoiaHR0cHM6XC9cL2pldGJyYWlucy5zcGFjZSIsInBlcm1fdG9rZW4iOiIyVDBoRW4yaDBFeTQiLCJwcmluY2lwYWxfdHlwZSI6IlVTRVIiLCJpYXQiOjE2MTgxNDQ3NDJ9.gas7f91Z82__V6vRhHMqotz0ZEviCyHdJHBzOKbOtbXL98taS8u2QMrgLpm926lCaA8EAccDURUDtCw6ugStxA5yfrbWAcJT10DalY917v-SoyJ1Hpt73FRJMPohXFEBV5S2AvO1fvOx1xc7IJc7eC6lryu0MPnfWSPKsIZ0hzU"
             }
 
             url "https://maven.pkg.jetbrains.space/booling/p/fe/future-engineering"
