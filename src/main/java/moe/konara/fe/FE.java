@@ -1,120 +1,41 @@
 package moe.konara.fe;
 
-import moe.konara.fe.Generators.OreGenerator;
-import moe.konara.fe.Utils.OreDictionaryLoader;
-import moe.konara.fe.recipe.Recipes;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-@Mod(
-        modid = FE.MOD_ID,
-        name = FE.MOD_NAME,
-        version = FE.VERSION
-)
+@Mod(FE.ID)
 public class FE {
+    public static final String ID = "fe";
+    public static final String NAME = "FE";
+    public static final String VERSION = "0.0.1-alpha";
+    public static final Logger LOGGER = LogManager.getLogger();
+    public static final ItemGroup FEGroup = new FEGroup();
 
-    public static final String MOD_ID = "fe";
-    public static final String MOD_NAME = "Future Engineering";
-    public static final String VERSION = "1.0-SNAPSHOT";
-
-    /**
-     * This is the instance of your mod as created by Forge. It will never be null.
-     */
-    @Mod.Instance(MOD_ID)
-    public static FE INSTANCE;
-
-    /**
-     * This is the first initialization event. Register tile entities here.
-     * The registry events below will have fired prior to entry to this method.
-     */
-    @Mod.EventHandler
-    public void preinit(FMLPreInitializationEvent event) {
-        new OreDictionaryLoader(event);
+    public FE() {
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        modEventBus.addListener(FE::init);
+        AllItems.ITEMS.register(modEventBus);
+        AllBlocks.BLOCKS.register(modEventBus);
     }
 
-    /**
-     * This is the second initialization event. Register custom recipes
-     */
-    @Mod.EventHandler
-    public void init(FMLInitializationEvent event) {
-        new Recipes();
-
+    public static void init(final FMLCommonSetupEvent event) {
+        LOGGER.info("Future Engineering Mod Started!");
     }
 
-    /**
-     * This is the final initialization event. Register actions from other mods here
-     */
-    @Mod.EventHandler
-    public void postinit(FMLPostInitializationEvent event) {
-        GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
-
-    }
-
-    /**
-     * Forge will automatically look up and bind blocks to the fields in this class
-     * based on their registry name.
-     */
-    @GameRegistry.ObjectHolder(MOD_ID)
-    public static class Blocks {
-      /*
-          public static final MySpecialBlock mySpecialBlock = null; // placeholder for special block below
-      */
-    }
-
-    /**
-     * Forge will automatically look up and bind items to the fields in this class
-     * based on their registry name.
-     */
-    @GameRegistry.ObjectHolder(MOD_ID)
-    public static class Items {
-      /*
-          public static final ItemBlock mySpecialBlock = null; // itemblock for the block above
-          public static final MySpecialItem mySpecialItem = null; // placeholder for special item below
-      */
-    }
-
-    /**
-     * This is a special class that listens to registry events, to allow creation of mod blocks and items at the proper time.
-     */
-    @Mod.EventBusSubscriber
-    public static class ObjectRegistryHandler {
-        /**
-         * Listen for the register event for creating custom items
-         */
-        @SubscribeEvent
-        public static void addItems(RegistryEvent.Register<Item> event) {
-           /*
-             event.getRegistry().register(new ItemBlock(Blocks.myBlock).setRegistryName(MOD_ID, "myBlock"));
-             event.getRegistry().register(new MySpecialItem().setRegistryName(MOD_ID, "mySpecialItem"));
-            */
+    private static class FEGroup extends ItemGroup {
+        public FEGroup() {
+            super("fe_group");
         }
 
-        /**
-         * Listen for the register event for creating custom blocks
-         */
-        @SubscribeEvent
-        public static void addBlocks(RegistryEvent.Register<Block> event) {
-           /*
-             event.getRegistry().register(new MySpecialBlock().setRegistryName(MOD_ID, "mySpecialBlock"));
-            */
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(AllItems.INGOT_COPPER.get());
         }
     }
-    /* EXAMPLE ITEM AND BLOCK - you probably want these in separate files
-    public static class MySpecialItem extends Item {
-
-    }
-
-    public static class MySpecialBlock extends Block {
-
-    }
-    */
-
-
 }

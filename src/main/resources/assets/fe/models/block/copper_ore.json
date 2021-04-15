@@ -1,12 +1,6 @@
 {
-  "parent": "block/cube",
-  "textures": { 
-    "particle": "fe:blocks/copper_ore", 
-    "down": "fe:blocks/copper_ore", 
-    "up": "fe:blocks/copper_ore", 
-    "north": "fe:blocks/copper_ore", 
-    "south": "fe:blocks/copper_ore", 
-    "west": "fe:blocks/copper_ore", 
-    "east": "fe:blocks/copper_ore"
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "fe:blocks/copper_ore"
   }
 }

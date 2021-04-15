@@ -1,7 +1,5 @@
 {
   "variants": {
-    "normal": {
-      "model": "fe:copper_ore"
-    }
+    "": { "model": "fe:block/copper_ore" }
   }
 }
