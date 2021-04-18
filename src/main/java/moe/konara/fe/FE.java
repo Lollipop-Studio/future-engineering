@@ -15,7 +15,12 @@ public class FE {
     public static final String NAME = "FE";
     public static final String VERSION = "0.0.1-alpha";
     public static final Logger LOGGER = LogManager.getLogger();
-    public static final ItemGroup FEGroup = new FEGroup();
+    public static final ItemGroup FEGroup = new ItemGroup("fe_group") {
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(AllItems.INGOT_COPPER.get());
+        }
+    };
 
     public FE() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -28,14 +33,4 @@ public class FE {
         LOGGER.info("Future Engineering Mod Started!");
     }
 
-    private static class FEGroup extends ItemGroup {
-        public FEGroup() {
-            super("fe_group");
-        }
-
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(AllItems.INGOT_COPPER.get());
-        }
-    }
 }
