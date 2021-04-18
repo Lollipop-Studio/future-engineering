@@ -1,9 +1,7 @@
 package moe.konara.fe;
 
-import moe.konara.fe.blocks.ores.CopperOre;
-import net.minecraft.block.AbstractBlock;
+import moe.konara.fe.Blocks.Ores.*;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
