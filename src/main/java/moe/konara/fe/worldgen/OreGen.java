@@ -1,4 +1,4 @@
-package moe.konara.fe.World;
+package moe.konara.fe.worldgen;
 
 
 import moe.konara.fe.AllBlocks;
@@ -24,7 +24,7 @@ public class OreGen {
     public static void generateOres(final BiomeLoadingEvent event) {
         if (!(event.getCategory().equals(Biome.Category.NETHER) || event.getCategory().equals(Biome.Category.THEEND))) {
             generateOre(event.getGeneration(), OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                AllBlocks.ORE_COPPER.get().getDefaultState(), 5, 1, 60, 8);
+                AllBlocks.COPPER_ORE.get().getDefaultState(), 5, 1, 60, 8);
         }
     }
 

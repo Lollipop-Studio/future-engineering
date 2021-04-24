@@ -1,4 +1,4 @@
-package moe.konara.fe.Blocks.Ores;
+package moe.konara.fe.blocks.ores;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -8,9 +8,9 @@ public class CopperOre extends Block {
     public CopperOre() {
         super(
                 Properties.create(Material.IRON)
-                .sound(SoundType.STONE)
-                .setRequiresTool()
-                .hardnessAndResistance(1.5F)
+                        .sound(SoundType.STONE)
+                        .setRequiresTool()
+                        .hardnessAndResistance(3.0F, 3.0F)
         );
     }
 }

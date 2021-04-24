@@ -18,7 +18,7 @@ public class FE {
     public static final ItemGroup FEGroup = new ItemGroup("fe_group") {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(AllItems.INGOT_COPPER.get());
+            return new ItemStack(AllItems.COPPER_INGOT.get());
         }
     };
 
@@ -30,6 +30,8 @@ public class FE {
     }
 
     public static void init(final FMLCommonSetupEvent event) {
+
+
         LOGGER.info("Future Engineering Mod Started!");
     }
 
