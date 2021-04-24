@@ -1,7 +1,10 @@
 package moe.konara.fe;
 
+import moe.konara.fe.worldgen.OreGen;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -27,6 +30,9 @@ public class FE {
         modEventBus.addListener(FE::init);
         AllItems.ITEMS.register(modEventBus);
         AllBlocks.BLOCKS.register(modEventBus);
+
+        MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, OreGen::generateOres);
     }
 
     public static void init(final FMLCommonSetupEvent event) {

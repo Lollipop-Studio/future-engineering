@@ -18,13 +18,13 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 
-@Mod.EventBusSubscriber
+
 public class OreGen {
     //TODO 2021年4月20日 矿物生成器
     public static void generateOres(final BiomeLoadingEvent event) {
         if (!(event.getCategory().equals(Biome.Category.NETHER) || event.getCategory().equals(Biome.Category.THEEND))) {
             generateOre(event.getGeneration(), OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                AllBlocks.COPPER_ORE.get().getDefaultState(), 5, 1, 60, 8);
+                AllBlocks.COPPER_ORE.get().getDefaultState(), 8, 1, 60, 15);
         }
     }
 
