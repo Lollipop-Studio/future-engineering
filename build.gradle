@@ -69,7 +69,20 @@ minecraft {
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
+repositories {
+    maven {
+        name 'prog'
+        url 'https://dvs1.progwml6.com/files/maven'
+        content {
+            includeGroup 'mezz.jei'
+        }
+    }
+}
+
 dependencies {
+    compileOnly "org.jetbrains:annotations:${jb_annotations}"
+    compileOnly fg.deobf("mezz.jei:jei-1.16.4:${jei_version}:api")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.16.4:${jei_version}")
     minecraft 'net.minecraftforge:forge:1.16.5-36.1.4'
 }
 

@@ -12,6 +12,7 @@ import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.placement.TopSolidRangeConfig;
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+import org.jetbrains.annotations.NotNull;
 
 public class OreGen {
     public static void generateOres(final BiomeLoadingEvent event) {
@@ -21,7 +22,7 @@ public class OreGen {
         }
     }
 
-    private static void generateOre(BiomeGenerationSettingsBuilder settings, RuleTest fillerType, BlockState state,
+    private static void generateOre(@NotNull BiomeGenerationSettingsBuilder settings, RuleTest fillerType, BlockState state,
                                     int veinSize, int minHeight, int maxHeight, int amount) {
         settings.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
                 Feature.ORE.withConfiguration(new OreFeatureConfig(fillerType, state, veinSize))
