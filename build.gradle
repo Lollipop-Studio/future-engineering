@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '0.0.1-alpha'
+version = '0.0.2-alpha'
 group = 'moe.konara.fe'
 archivesBaseName = 'fe'
 

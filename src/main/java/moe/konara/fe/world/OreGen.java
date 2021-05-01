@@ -1,10 +1,11 @@
-package moe.konara.fe.worldgen;
+package moe.konara.fe.world;
 
 
 import moe.konara.fe.AllBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.feature.template.RuleTest;
@@ -17,16 +18,19 @@ import org.jetbrains.annotations.NotNull;
 public class OreGen {
     public static void generateOres(final BiomeLoadingEvent event) {
         if (!(event.getCategory().equals(Biome.Category.NETHER) || event.getCategory().equals(Biome.Category.THEEND))) {
-            generateOre(event.getGeneration(), OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                AllBlocks.COPPER_ORE.get().getDefaultState(), 8, 1, 60, 15);
+//            generateOre(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
+//                AllBlocks.COPPER_ORE.get().getDefaultState(), 8, 1, 60, 15);
+            event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+                    generateOre(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
+                            AllBlocks.COPPER_ORE.get().getDefaultState(),
+                            8, 1, 60, 15));
         }
     }
 
-    private static void generateOre(@NotNull BiomeGenerationSettingsBuilder settings, RuleTest fillerType, BlockState state,
-                                    int veinSize, int minHeight, int maxHeight, int amount) {
-        settings.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-                Feature.ORE.withConfiguration(new OreFeatureConfig(fillerType, state, veinSize))
+    private static ConfiguredFeature<?, ?> generateOre(RuleTest fillerType, BlockState state,
+                                                       int veinSize, int minHeight, int maxHeight, int amount) {
+        return Feature.ORE.withConfiguration(new OreFeatureConfig(fillerType, state, veinSize))
                         .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(minHeight, 0, maxHeight)))
-                        .square().count(amount));
+                        .square().count(amount);
     }
 }
