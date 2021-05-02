@@ -1,5 +1,11 @@
 {
   "itemGroup.fe_group": "未来工程",
   "item.fe.copper_ingot": "铜锭",
-  "block.fe.copper_ore": "铜矿石"
+  "block.fe.copper_ore": "铜矿石",
+  "item.fe.aluminum_ingot": "铝锭",
+  "block.fe.aluminum_ore": "铝矿石",
+  "item.fe.goran_gem": "戈兰宝石",
+  "block.fe.goran_ore": "戈兰矿石",
+  "item.fe.cersei_crystal": "瑟维晶体",
+  "block.fe.cersei_crystal_block": "瑟维晶块"
 }

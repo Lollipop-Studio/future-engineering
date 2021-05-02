@@ -17,14 +17,24 @@ import org.jetbrains.annotations.NotNull;
 
 public class OreGen {
     public static void generateOres(final BiomeLoadingEvent event) {
-        if (!(event.getCategory().equals(Biome.Category.NETHER) || event.getCategory().equals(Biome.Category.THEEND))) {
-//            generateOre(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-//                AllBlocks.COPPER_ORE.get().getDefaultState(), 8, 1, 60, 15);
-            event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-                    generateOre(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                            AllBlocks.COPPER_ORE.get().getDefaultState(),
-                            8, 1, 60, 15));
+        switch (event.getCategory()) {
+            case NETHER:
+            case THEEND:
+                break;
+            default:
+                // Copper
+                event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+                        generateOre(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
+                                AllBlocks.COPPER_ORE.get().getDefaultState(),
+                                8, 1, 60, 15));
+                // Aluminum
+                event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+                        generateOre(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
+                                AllBlocks.ALUMINUM_ORE.get().getDefaultState(),
+                                8, 1, 60, 15));
+                break;
         }
+
     }
 
     private static ConfiguredFeature<?, ?> generateOre(RuleTest fillerType, BlockState state,

@@ -1,5 +1,12 @@
 {
   "itemGroup.fe_group": "Future Engineering",
   "item.fe.copper_ingot": "Copper Ingot",
-  "block.fe.copper_ore": "Copper Ore"
+  "block.fe.copper_ore": "Copper Ore",
+  "item.fe.aluminum_ingot": "Aluminum Ingot",
+  "block.fe.aluminum_ore": "Aluminum Ore",
+  "item.fe.goran_gem": "Goran Gem",
+  "block.fe.goran_ore": "Goran Ore",
+  "item.fe.cersei_crystal": "Cersei Crystal",
+  "block.fe.cersei_crystal_block": "Cersei Crystal Block"
+
 }
