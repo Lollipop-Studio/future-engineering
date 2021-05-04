@@ -1,7 +1,8 @@
 package moe.konara.fe.world;
 
-
+import com.sun.org.apache.xerces.internal.dom.DeferredAttrImpl;
 import moe.konara.fe.AllBlocks;
+import moe.konara.fe.FE;
 import net.minecraft.block.BlockState;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
@@ -13,9 +14,12 @@ import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.placement.TopSolidRangeConfig;
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
-public class OreGen {
+public class AllOreFeatures {
     public static void generateOres(final BiomeLoadingEvent event) {
         switch (event.getCategory()) {
             case NETHER:

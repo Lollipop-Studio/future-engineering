@@ -19,24 +19,29 @@ public class AllBlocks {
                     AbstractBlock.Properties
                             .create(Material.ROCK)
                             .harvestTool(ToolType.PICKAXE)
+                            .setRequiresTool()
                             .hardnessAndResistance(3.0F, 3.0F)
             )),
             ALUMINUM_ORE = BLOCKS.register("aluminum_ore", () -> new OreBlock(
                     AbstractBlock.Properties
                             .create(Material.ROCK)
                             .harvestTool(ToolType.PICKAXE)
+                            .setRequiresTool()
                             .hardnessAndResistance(3.0F, 3.0F)
             )),
             CERSEI_CRYSTAL_BLOCK = BLOCKS.register("cersei_crystal_block", () -> new OreBlock(
                     AbstractBlock.Properties
                             .create(Material.ROCK)
                             .harvestTool(ToolType.PICKAXE)
+                            .setRequiresTool()
                             .hardnessAndResistance(3.0F, 3.0F)
+                            .notSolid()
             )),
             GORAN_ORE = BLOCKS.register("goran_ore", () -> new OreBlock(
                     AbstractBlock.Properties
                             .create(Material.ROCK)
                             .harvestTool(ToolType.PICKAXE)
+                            .setRequiresTool()
                             .hardnessAndResistance(50.0F, 5.0F)
             ))
                     ;

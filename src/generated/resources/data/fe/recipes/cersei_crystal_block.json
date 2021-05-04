@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "fe:cersei_crystal"
+    }
+  },
+  "result": {
+    "item": "fe:cersei_crystal_block"
+  }
+}
