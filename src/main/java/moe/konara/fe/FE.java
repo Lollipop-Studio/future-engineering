@@ -1,6 +1,5 @@
 package moe.konara.fe;
 
-import moe.konara.fe.datagen.AllCraftRecipes;
 import moe.konara.fe.world.AllOreFeatures;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -9,7 +8,6 @@ import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,7 +29,6 @@ public class FE {
     public FE() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(FE::init);
-        modEventBus.addListener(FE::dataGen);
         AllItems.ITEMS.register(modEventBus);
         AllBlocks.BLOCKS.register(modEventBus);
 
@@ -43,10 +40,6 @@ public class FE {
 
 
         LOGGER.info("Future Engineering Mod Started!");
-    }
-
-    public static void dataGen(final GatherDataEvent event) {
-        event.getGenerator().addProvider(new AllCraftRecipes(event.getGenerator()));
     }
 
 }
