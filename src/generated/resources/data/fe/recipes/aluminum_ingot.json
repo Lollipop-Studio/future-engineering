@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "fe:copper_ore"
+    "item": "fe:aluminum_ore"
   },
-  "result": "fe:copper_ingot",
+  "result": "fe:aluminum_ingot",
   "experience": 0.35,
   "cookingtime": 200
 }

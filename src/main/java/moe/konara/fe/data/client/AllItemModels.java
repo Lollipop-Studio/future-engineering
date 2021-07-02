@@ -1,4 +1,4 @@
-package moe.konara.fe.datagen.client;
+package moe.konara.fe.data.client;
 
 import moe.konara.fe.FE;
 import net.minecraft.data.DataGenerator;
@@ -7,8 +7,8 @@ import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-public class ModItemModelProvider extends ItemModelProvider {
-    public ModItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
+public class AllItemModels extends ItemModelProvider {
+    public AllItemModels(DataGenerator generator, ExistingFileHelper existingFileHelper) {
         super(generator, FE.ID, existingFileHelper);
     }
 

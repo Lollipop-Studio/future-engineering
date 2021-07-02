@@ -1,7 +1,9 @@
-package moe.konara.fe.datagen;
+package moe.konara.fe.data;
 
-import moe.konara.fe.datagen.client.ModBlockStateProvider;
-import moe.konara.fe.datagen.client.ModItemModelProvider;
+import moe.konara.fe.data.client.AllBlockStates;
+import moe.konara.fe.data.client.AllItemModels;
+import moe.konara.fe.data.common.AllCraftRecipes;
+import moe.konara.fe.data.common.AllLootTables;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -19,12 +21,13 @@ public final class DataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
         if (event.includeClient()) {
-            gen.addProvider(new ModItemModelProvider(gen, existingFileHelper));
-            gen.addProvider(new ModBlockStateProvider(gen, existingFileHelper));
+            gen.addProvider(new AllItemModels(gen, existingFileHelper));
+            gen.addProvider(new AllBlockStates(gen, existingFileHelper));
         }
 
         if (event.includeServer()) {
-
+            gen.addProvider(new AllLootTables(gen));
+            gen.addProvider(new AllCraftRecipes(gen));
         }
 
     }

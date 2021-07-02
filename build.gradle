@@ -56,7 +56,10 @@ minecraft {
 
             property 'forge.logging.console.level', 'info'
 
-            args '--mod', 'fe', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'fe', '--all',
+                    '--existing', file('src/main/resources/').toString(),
+                    '--existing', file('src/generated/resources/').toString(),
+                    '--output', file('src/generated/resources/')
 
             mods {
                 fe {

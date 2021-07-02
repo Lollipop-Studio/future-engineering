@@ -1,4 +1,4 @@
-package moe.konara.fe.datagen.client;
+package moe.konara.fe.data.client;
 
 import moe.konara.fe.FE;
 import moe.konara.fe.blocks.AllBlocks;
@@ -8,8 +8,8 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.fml.RegistryObject;
 
-public class ModBlockStateProvider extends BlockStateProvider {
-    public ModBlockStateProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
+public class AllBlockStates extends BlockStateProvider {
+    public AllBlockStates(DataGenerator generator, ExistingFileHelper existingFileHelper) {
         super(generator, FE.ID, existingFileHelper);
     }
 
