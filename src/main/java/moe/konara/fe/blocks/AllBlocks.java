@@ -1,11 +1,12 @@
-package moe.konara.fe;
+package moe.konara.fe.blocks;
 
-import net.minecraft.block.*;
+import moe.konara.fe.FE;
+import moe.konara.fe.blocks.CerseiCrystalBlock;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.OreBlock;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -29,14 +30,15 @@ public class AllBlocks {
                             .setRequiresTool()
                             .hardnessAndResistance(3.0F, 3.0F)
             )),
-            CERSEI_CRYSTAL_BLOCK = BLOCKS.register("cersei_crystal_block", () -> new GlassBlock(
+            CERSEI_CRYSTAL_BLOCK = BLOCKS.register("cersei_crystal_block", () -> new CerseiCrystalBlock(
                     AbstractBlock.Properties
-                            .create(Material.ROCK)
+                            .create(Material.ICE)
+                            .tickRandomly()
                             .harvestTool(ToolType.PICKAXE)
                             .setRequiresTool()
-                            .hardnessAndResistance(3.0F, 3.0F)
-                            .notSolid()
                             .sound(SoundType.GLASS)
+                            .notSolid()
+                            .hardnessAndResistance(3.0F, 3.0F)
             )),
             GORAN_ORE = BLOCKS.register("goran_ore", () -> new OreBlock(
                     AbstractBlock.Properties
@@ -44,7 +46,5 @@ public class AllBlocks {
                             .harvestTool(ToolType.PICKAXE)
                             .setRequiresTool()
                             .hardnessAndResistance(50.0F, 5.0F)
-            ))
-                    ;
-
+            ));
 }

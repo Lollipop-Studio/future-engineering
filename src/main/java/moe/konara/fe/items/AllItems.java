@@ -1,5 +1,7 @@
-package moe.konara.fe;
+package moe.konara.fe.items;
 
+import moe.konara.fe.FE;
+import moe.konara.fe.blocks.AllBlocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;

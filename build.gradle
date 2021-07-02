@@ -89,12 +89,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "magicelfcraft",
-            "Specification-Vendor": "magicelfcraftsareus",
+            "Specification-Title": "future-engineering",
+            "Specification-Vendor": "future-engineering-sareus",
             "Specification-Version": "1",
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
-            "Implementation-Vendor" :"magicelfcraftsareus",
+            "Implementation-Vendor" :"future-engineering-sareus",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }

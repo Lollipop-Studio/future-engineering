@@ -1,1 +1,16 @@
-3e829efe3d2798774e9bd0a43af69a1a62a33f96 data/fe/recipes/cersei_crystal_block.json
+725c9e21bdfd421106b3655163b30931e3ba9860 assets/fe/blockstates/aluminum_ore.json
+e41aae97fbfe87ab9bebb987dae05fc8492738ba assets/fe/blockstates/cersei_crystal_block.json
+747aa6f3e60d6bb6dfa9b86b41bbe6c4cb38ebe2 assets/fe/blockstates/copper_ore.json
+81b75500bd5cdd1e40c2ae301774f7b450d69863 assets/fe/blockstates/goran_ore.json
+c258699f0295da360503b3526ce814afd6f08cdd assets/fe/models/block/aluminum_ore.json
+2e5ecfdab149849726cea4138ef93e1aeb9a44e5 assets/fe/models/block/cersei_crystal_block.json
+91270094f233c4fd499fb912b2ff739dce99e886 assets/fe/models/block/copper_ore.json
+ebfaff5e32c74899974aa9646f7b91729c148f15 assets/fe/models/block/goran_ore.json
+25a8ec1fbb786b25551e1167c0bc883886ebd5f8 assets/fe/models/item/aluminum_ingot.json
+03d5f6d120b1ac565b8ceb531c97ab83555f68ed assets/fe/models/item/aluminum_ore.json
+640b96f9224bda2a2170a5fa8f7c1d512136122f assets/fe/models/item/cersei_crystal.json
+139db388f9e72b455907fcb524b941561c376944 assets/fe/models/item/cersei_crystal_block.json
+b875a365221657d9fcf38377a37b373dfc8e48eb assets/fe/models/item/copper_ingot.json
+410741e96abe38c3288f9599b034166e7e994ff6 assets/fe/models/item/copper_ore.json
+9e79d3a650159f1c025d517e120d548760960582 assets/fe/models/item/goran_gem.json
+dcafac15a438dabd028a78577de616f4c320c421 assets/fe/models/item/goran_ore.json

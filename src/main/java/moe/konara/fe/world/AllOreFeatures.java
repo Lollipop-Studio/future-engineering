@@ -1,6 +1,6 @@
 package moe.konara.fe.world;
 
-import moe.konara.fe.AllBlocks;
+import moe.konara.fe.blocks.AllBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.ConfiguredFeature;

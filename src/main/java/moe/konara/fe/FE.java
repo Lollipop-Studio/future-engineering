@@ -1,5 +1,7 @@
 package moe.konara.fe;
 
+import moe.konara.fe.blocks.AllBlocks;
+import moe.konara.fe.items.AllItems;
 import moe.konara.fe.world.AllOreFeatures;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -37,8 +39,6 @@ public class FE {
     }
 
     public static void init(final FMLCommonSetupEvent event) {
-
-
         LOGGER.info("Future Engineering Mod Started!");
     }
 
