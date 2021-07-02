@@ -29,7 +29,7 @@ public class AllBlocks {
                             .setRequiresTool()
                             .hardnessAndResistance(3.0F, 3.0F)
             )),
-            CERSEI_CRYSTAL_BLOCK = BLOCKS.register("cersei_crystal_block", () -> new OreBlock(
+            CERSEI_CRYSTAL_BLOCK = BLOCKS.register("cersei_crystal_block", () -> new GlassBlock(
                     AbstractBlock.Properties
                             .create(Material.ROCK)
                             .harvestTool(ToolType.PICKAXE)
