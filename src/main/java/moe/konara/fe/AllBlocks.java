@@ -36,6 +36,7 @@ public class AllBlocks {
                             .setRequiresTool()
                             .hardnessAndResistance(3.0F, 3.0F)
                             .notSolid()
+                            .sound(SoundType.GLASS)
             )),
             GORAN_ORE = BLOCKS.register("goran_ore", () -> new OreBlock(
                     AbstractBlock.Properties

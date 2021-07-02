@@ -13,6 +13,7 @@ import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
 
 @Mod(FE.ID)
 public class FE {
@@ -22,7 +23,7 @@ public class FE {
     public static final Logger LOGGER = LogManager.getLogger();
     public static final ItemGroup FEGroup = new ItemGroup("fe_group") {
         @Override
-        public ItemStack createIcon() {
+        public @NotNull ItemStack createIcon() {
             return new ItemStack(AllItems.COPPER_INGOT.get());
         }
     };
