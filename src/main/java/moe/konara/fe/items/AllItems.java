@@ -1,12 +1,16 @@
 package moe.konara.fe.items;
 
 import moe.konara.fe.FE;
+import moe.konara.fe.Fluids.AllFluids;
 import moe.konara.fe.blocks.AllBlocks;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import static net.minecraft.item.Items.BUCKET;
 
 public class AllItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FE.ID);
@@ -23,6 +27,9 @@ public class AllItems {
             COPPER_INGOT = ITEMS.register("copper_ingot", () -> new Item(new Item.Properties().group(FE.FEGroup))),
             ALUMINUM_INGOT = ITEMS.register("aluminum_ingot", () -> new Item(new Item.Properties().group(FE.FEGroup))),
             GORAN_GEM = ITEMS.register("goran_gem", () -> new Item(new Item.Properties().group(FE.FEGroup))),
-            CERSEI_CRYSTAL = ITEMS.register("cersei_crystal", () -> new Item(new Item.Properties().group(FE.FEGroup)))
+            CERSEI_CRYSTAL = ITEMS.register("cersei_crystal", () -> new Item(new Item.Properties().group(FE.FEGroup))),
+
+            //FluidBucket
+            WEIRD_SPRING_WATER_BUCKET = ITEMS.register("weird_spring_water_bucket", () -> new BucketItem(AllFluids.WEIRD_SPRING_WATER, new Item.Properties().group(FE.FEGroup).containerItem(BUCKET)))
     ;
 }

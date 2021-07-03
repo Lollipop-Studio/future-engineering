@@ -1,5 +1,6 @@
 package moe.konara.fe.render;
 
+import moe.konara.fe.Fluids.AllFluids;
 import moe.konara.fe.blocks.AllBlocks;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -13,5 +14,7 @@ public class RenderTypeRegistry {
     @SubscribeEvent
     public static void onRenderTypeSetup(FMLClientSetupEvent event) {
         RenderTypeLookup.setRenderLayer(AllBlocks.CERSEI_CRYSTAL_BLOCK.get(), RenderType.getTranslucent());
+        RenderTypeLookup.setRenderLayer(AllFluids.WEIRD_SPRING_WATER.get(), RenderType.getTranslucent());
+        RenderTypeLookup.setRenderLayer(AllFluids.WEIRD_SPRING_WATER_FLOWING.get(), RenderType.getTranslucent());
     }
 }

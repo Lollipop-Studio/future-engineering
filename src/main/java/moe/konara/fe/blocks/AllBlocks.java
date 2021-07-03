@@ -1,11 +1,10 @@
 package moe.konara.fe.blocks;
 
+import com.mojang.datafixers.TypeRewriteRule;
 import moe.konara.fe.FE;
+import moe.konara.fe.Fluids.AllFluids;
 import moe.konara.fe.blocks.CerseiCrystalBlock;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.OreBlock;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
@@ -47,4 +46,10 @@ public class AllBlocks {
                             .setRequiresTool()
                             .hardnessAndResistance(50.0F, 5.0F)
             ));
+    //Fluid Block
+    public static final RegistryObject<FlowingFluidBlock>
+            WEIRD_SPRING_WATER_CUBE = BLOCKS.register("weird_spring_water", () -> new FlowingFluidBlock(
+                    AllFluids.WEIRD_SPRING_WATER, Block.Properties.create(Material.WATER).doesNotBlockMovement().hardnessAndResistance(100.0F).noDrops()))
+    ;
+
 }

@@ -1,5 +1,6 @@
 package moe.konara.fe;
 
+import moe.konara.fe.Fluids.AllFluids;
 import moe.konara.fe.blocks.AllBlocks;
 import moe.konara.fe.items.AllItems;
 import moe.konara.fe.world.AllOreFeatures;
@@ -33,6 +34,8 @@ public class FE {
         modEventBus.addListener(FE::init);
         AllItems.ITEMS.register(modEventBus);
         AllBlocks.BLOCKS.register(modEventBus);
+        AllFluids.FLUID.register(modEventBus);
+
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, AllOreFeatures::generateOres);
