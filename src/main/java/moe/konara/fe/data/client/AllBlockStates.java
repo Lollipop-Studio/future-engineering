@@ -16,6 +16,11 @@ public class AllBlockStates extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         for (RegistryObject<Block> object : AllBlocks.BLOCKS.getEntries()) {
+            // TODO:  Remove this if the weird_spring_water texture is provided.
+            if (object.get().matchesBlock(AllBlocks.WEIRD_SPRING_WATER_BLOCK.get())) {
+                continue;
+            }
+
             simpleBlock(object.get());
         }
     }
