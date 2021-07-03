@@ -48,7 +48,7 @@ public class AllBlocks {
             ));
     //Fluid Block
     public static final RegistryObject<FlowingFluidBlock>
-            WEIRD_SPRING_WATER_CUBE = BLOCKS.register("weird_spring_water", () -> new FlowingFluidBlock(
+            WEIRD_SPRING_WATER_BLOCK = BLOCKS.register("weird_spring_water", () -> new FlowingFluidBlock(
                     AllFluids.WEIRD_SPRING_WATER, Block.Properties.create(Material.WATER).doesNotBlockMovement().hardnessAndResistance(100.0F).noDrops()))
     ;
 

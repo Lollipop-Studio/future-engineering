@@ -34,7 +34,7 @@ public class FE {
         modEventBus.addListener(FE::init);
         AllItems.ITEMS.register(modEventBus);
         AllBlocks.BLOCKS.register(modEventBus);
-        AllFluids.FLUID.register(modEventBus);
+        AllFluids.FLUIDS.register(modEventBus);
 
 
         MinecraftForge.EVENT_BUS.register(this);

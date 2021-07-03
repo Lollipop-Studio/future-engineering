@@ -5,6 +5,13 @@
 */
 
 job("Build and run tests") {
+
+    container(displayName = "Test Data Generator", image = "openjdk:11") {
+        kotlinScript { api ->
+            api.gradlew("runData")
+        }
+    }
+
     container(displayName = "Run gradle build", image = "openjdk:11") {
         kotlinScript { api ->
             // here can be your complex logic

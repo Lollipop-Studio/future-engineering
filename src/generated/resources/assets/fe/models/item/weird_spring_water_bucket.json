@@ -1,5 +1,5 @@
 {
-  "parent": "item/generated",
+  "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "fe:item/weird_spring_water_bucket"
   }
