@@ -21,7 +21,7 @@ public class AllFluids {
             AllFluids.PROPERTIES));
     public static ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(WEIRD_SPRING_WATER, WEIRD_SPRING_WATER_FLOWING, FluidAttributes
             .builder(new ResourceLocation("block/water_still"), new ResourceLocation("block/water_flow"))
-                .color(0xFF420372).density(4000).viscosity(4000))
+                .color(0xFF87CEEB).density(4000).viscosity(4000))
                 .bucket(AllItems.WEIRD_SPRING_WATER_BUCKET)
                 .block(AllBlocks.WEIRD_SPRING_WATER_BLOCK)
                 .slopeFindDistance(3).explosionResistance(100F);
