@@ -14,3 +14,13 @@ b875a365221657d9fcf38377a37b373dfc8e48eb assets/fe/models/item/copper_ingot.json
 410741e96abe38c3288f9599b034166e7e994ff6 assets/fe/models/item/copper_ore.json
 9e79d3a650159f1c025d517e120d548760960582 assets/fe/models/item/goran_gem.json
 dcafac15a438dabd028a78577de616f4c320c421 assets/fe/models/item/goran_ore.json
+ab1d788310c6f443643009dc5ddd7bb6e968a204 assets/fe/models/item/weird_spring_water_bucket.json
+dcd84f39392d9f278b94ca046eaaf6b7ec7ce8da data/fe/loot_tables/blocks/aluminum_ore.json
+f1d9e39d5b1c199910eaf368fa2eb3a482287337 data/fe/loot_tables/blocks/cersei_crystal_block.json
+b057c83a5ca6effa81310babb11b3e9d90c82b3b data/fe/loot_tables/blocks/copper_ore.json
+5a5b4534646f80b8d566722903e9962b4e45f7d8 data/fe/loot_tables/blocks/goran_ore.json
+8cd0cf6801362664e70aa19a03d308f6f5c89fe2 data/fe/recipes/aluminum_ingot.json
+86b4558d68587d1d698828e025fbea2a17f513f4 data/fe/recipes/copper_ingot.json
+f39b83640a00bf4423b3fc91eef60cd18ef1bdc0 data/forge/tags/blocks/fluids/weird_spring_water.json
+b0886d19bcc8525fad4c5f5e36c3610cc3b0ef3e data/forge/tags/blocks/ores.json
+42e4bb0d8142f78fb21eba72237f5ec12969dd71 data/forge/tags/blocks/ores/copper.json

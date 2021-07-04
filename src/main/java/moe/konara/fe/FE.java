@@ -1,5 +1,6 @@
 package moe.konara.fe;
 
+import moe.konara.fe.Fluids.AllFluids;
 import moe.konara.fe.blocks.AllBlocks;
 import moe.konara.fe.items.AllItems;
 import moe.konara.fe.world.AllBiomes;
@@ -26,7 +27,7 @@ public class FE {
     public static final ItemGroup FEGroup = new ItemGroup("fe_group") {
         @Override
         public @NotNull ItemStack createIcon() {
-            return new ItemStack(AllItems.COPPER_INGOT.get());
+            return new ItemStack(AllItems.GEAR_CLOCK.get());
         }
     };
 
@@ -35,6 +36,8 @@ public class FE {
         modEventBus.addListener(FE::init);
         AllItems.ITEMS.register(modEventBus);
         AllBlocks.BLOCKS.register(modEventBus);
+        AllFluids.FLUIDS.register(modEventBus);
+
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, AllOreFeatures::generateOres);

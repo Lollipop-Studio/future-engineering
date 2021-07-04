@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '0.0.2-alpha'
+version = '0.0.3-alpha'
 group = 'moe.konara.fe'
 archivesBaseName = 'fe'
 
@@ -26,7 +26,7 @@ minecraft {
 
             property 'forge.logging.markers', 'REGISTRIES'
 
-            property 'forge.logging.console.level', 'info'
+            property 'forge.logging.console.level', 'warn'
 
             mods {
                 fe {
@@ -56,7 +56,10 @@ minecraft {
 
             property 'forge.logging.console.level', 'info'
 
-            args '--mod', 'fe', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'fe', '--all',
+                    '--existing', file('src/main/resources/').toString(),
+                    '--existing', file('src/generated/resources/').toString(),
+                    '--output', file('src/generated/resources/')
 
             mods {
                 fe {
@@ -67,7 +70,10 @@ minecraft {
     }
 }
 
-sourceSets.main.resources { srcDir 'src/generated/resources' }
+sourceSets.main.resources {
+    srcDir 'src/generated/resources'
+    exclude '.cache'
+}
 
 repositories {
     maven {
