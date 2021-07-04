@@ -6,11 +6,8 @@ import moe.konara.fe.blocks.AllBlocks;
 import moe.konara.fe.items.AllItems;
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.LootTableProvider;
 import net.minecraft.data.loot.BlockLootTables;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
-import net.minecraft.item.Item;
 import net.minecraft.loot.*;
 import net.minecraft.loot.functions.ApplyBonus;
 import net.minecraft.loot.functions.LimitCount;
@@ -51,6 +48,14 @@ public class AllLootTables extends ForgeLootTableProvider {
                                             .acceptFunction(SetCount.builder(RandomValueRange.of(2.0F, 4.0F)))
                                             .acceptFunction(ApplyBonus.uniformBonusCount(Enchantments.FORTUNE))
                                             .acceptFunction(LimitCount.func_215911_a(IntClamper.func_215843_a(1, 4))))));
+            registerLootTable(AllBlocks.CHARGED_CERSEI_CRYSTAL_BLOCK.get(),
+                    (charged_cersei_crystal_block) ->
+                            droppingWithSilkTouch(charged_cersei_crystal_block,
+                                    withExplosionDecay(charged_cersei_crystal_block, ItemLootEntry.builder(AllItems.CHARGED_CERSEI_CRYSTAL.get())
+                                            .acceptFunction(SetCount.builder(RandomValueRange.of(2.0F, 4.0F)))
+                                            .acceptFunction(ApplyBonus.uniformBonusCount(Enchantments.FORTUNE))
+                                            .acceptFunction(LimitCount.func_215911_a(IntClamper.func_215843_a(1, 4)))))
+            );
             registerLootTable(AllBlocks.GORAN_ORE.get(),
                     (goran_ore) ->
                             droppingWithSilkTouch(goran_ore,

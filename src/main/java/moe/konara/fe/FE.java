@@ -25,7 +25,7 @@ public class FE {
     public static final ItemGroup FEGroup = new ItemGroup("fe_group") {
         @Override
         public @NotNull ItemStack createIcon() {
-            return new ItemStack(AllItems.COPPER_INGOT.get());
+            return new ItemStack(AllItems.GEAR_CLOCK.get());
         }
     };
 

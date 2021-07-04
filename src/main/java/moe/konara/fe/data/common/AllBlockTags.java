@@ -16,8 +16,9 @@ public class AllBlockTags extends BlockTagsProvider {
 
     @Override
     protected void registerTags() {
-        getOrCreateBuilder(ModTags.Blocks.ORES_COPPER).add(AllBlocks.COPPER_ORE.get());
-        getOrCreateBuilder(Tags.Blocks.ORES).addTag(ModTags.Blocks.ORES_COPPER);
-//        getOrCreateBuilder(ModTags.Fluids.)
+        getOrCreateBuilder(ModTags.Blocks.Ores.ORES_COPPER).add(AllBlocks.COPPER_ORE.get());
+        getOrCreateBuilder(Tags.Blocks.ORES).addTag(ModTags.Blocks.Ores.ORES_COPPER);
+
+
     }
 }

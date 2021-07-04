@@ -1,9 +1,7 @@
 package moe.konara.fe.blocks;
 
-import com.mojang.datafixers.TypeRewriteRule;
 import moe.konara.fe.FE;
 import moe.konara.fe.Fluids.AllFluids;
-import moe.konara.fe.blocks.CerseiCrystalBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
@@ -16,12 +14,12 @@ public class AllBlocks {
 
     public static final RegistryObject<Block>
             COPPER_ORE = BLOCKS.register("copper_ore", () -> new OreBlock(
-                    AbstractBlock.Properties
-                            .create(Material.ROCK)
-                            .harvestTool(ToolType.PICKAXE)
-                            .setRequiresTool()
-                            .hardnessAndResistance(3.0F, 3.0F)
-            )),
+            AbstractBlock.Properties
+                    .create(Material.ROCK)
+                    .harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool()
+                    .hardnessAndResistance(3.0F, 3.0F)
+    )),
             ALUMINUM_ORE = BLOCKS.register("aluminum_ore", () -> new OreBlock(
                     AbstractBlock.Properties
                             .create(Material.ROCK)
@@ -30,6 +28,16 @@ public class AllBlocks {
                             .hardnessAndResistance(3.0F, 3.0F)
             )),
             CERSEI_CRYSTAL_BLOCK = BLOCKS.register("cersei_crystal_block", () -> new CerseiCrystalBlock(
+                    AbstractBlock.Properties
+                            .create(Material.ICE)
+                            .tickRandomly()
+                            .harvestTool(ToolType.PICKAXE)
+                            .setRequiresTool()
+                            .sound(SoundType.GLASS)
+                            .notSolid()
+                            .hardnessAndResistance(3.0F, 3.0F)
+            )),
+            CHARGED_CERSEI_CRYSTAL_BLOCK = BLOCKS.register("charged_cersei_crystal_block", () -> new CerseiCrystalBlock(
                     AbstractBlock.Properties
                             .create(Material.ICE)
                             .tickRandomly()
@@ -49,7 +57,6 @@ public class AllBlocks {
     //Fluid Block
     public static final RegistryObject<FlowingFluidBlock>
             WEIRD_SPRING_WATER_BLOCK = BLOCKS.register("weird_spring_water", () -> new FlowingFluidBlock(
-                    AllFluids.WEIRD_SPRING_WATER, Block.Properties.create(Material.WATER).doesNotBlockMovement().hardnessAndResistance(100.0F).noDrops()))
-    ;
+            AllFluids.WEIRD_SPRING_WATER, Block.Properties.create(Material.WATER).doesNotBlockMovement().hardnessAndResistance(100.0F).noDrops()));
 
 }
