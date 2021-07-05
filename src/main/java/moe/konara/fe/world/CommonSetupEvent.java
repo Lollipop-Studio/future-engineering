@@ -17,6 +17,5 @@ public class CommonSetupEvent {
     @SubscribeEvent
     public static void onCommonSetup(FMLCommonSetupEvent event) {
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, AllBiomes.MOONLIGHT.getId()), 1000));
-        //TODO 只能打开客户端，创建世界必崩溃
     }
 }

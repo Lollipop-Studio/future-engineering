@@ -37,7 +37,7 @@ public class FE {
         AllItems.ITEMS.register(modEventBus);
         AllBlocks.BLOCKS.register(modEventBus);
         AllFluids.FLUIDS.register(modEventBus);
-
+        AllBiomes.BIOMES.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, AllOreFeatures::generateOres);
