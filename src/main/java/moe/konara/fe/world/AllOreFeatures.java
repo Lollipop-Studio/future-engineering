@@ -27,7 +27,7 @@ public class AllOreFeatures {
                 event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
                         generateOre(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
                                 AllBlocks.ALUMINUM_ORE.get().getDefaultState(),
-                                8, 1, 60, 15));
+                                7, 3, 55, 13));
                 break;
         }
     }

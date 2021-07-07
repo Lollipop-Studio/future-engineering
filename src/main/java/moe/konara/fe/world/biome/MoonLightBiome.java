@@ -47,7 +47,7 @@ public class MoonLightBiome {
         DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
-        Biome moonlight = (new Biome.Builder())
+        return (new Biome.Builder())
                 .precipitation(Biome.RainType.RAIN)
                 .category(Biome.Category.PLAINS)
                 .depth(0.125F)
@@ -68,7 +68,6 @@ public class MoonLightBiome {
                 .withMobSpawnSettings(mobspawninfo$builder.build())
                 .withGenerationSettings(biomegenerationsettings$builder.build())
                 .build();
-        return moonlight;
     }
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {

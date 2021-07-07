@@ -16,7 +16,7 @@ public class AllBiomes {
     public static RegistryObject<Biome>
             MOONLIGHT = BIOMES.register("moonlight_biome", MoonLightBiome::make);
 
-    public static void registerBiomes(final FMLCommonSetupEvent event) {
+    public static void registerBiomes(FMLCommonSetupEvent event) {
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, AllBiomes.MOONLIGHT.getId()), 1000));
     }
 }

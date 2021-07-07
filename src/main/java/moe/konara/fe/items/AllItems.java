@@ -19,20 +19,20 @@ public class AllItems {
     public static final RegistryObject<Item>
 
             // Ores
-            COPPER_ORE = ITEMS.register("copper_ore", () -> new BlockItem(AllBlocks.COPPER_ORE.get(), new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))),
-            ALUMINUM_ORE = ITEMS.register("aluminum_ore", () -> new BlockItem(AllBlocks.ALUMINUM_ORE.get(), new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))),
-            GORAN_ORE = ITEMS.register("goran_ore", () -> new BlockItem(AllBlocks.GORAN_ORE.get(), new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))),
-            CERSEI_CRYSTAL_BLOCK = ITEMS.register("cersei_crystal_block", () -> new BlockItem(AllBlocks.CERSEI_CRYSTAL_BLOCK.get(), new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))),
-            CHARGED_CERSEI_CRYSTAL_BLOCK = ITEMS.register("charged_cersei_crystal_block", () -> new BlockItem(AllBlocks.CHARGED_CERSEI_CRYSTAL_BLOCK.get(), new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))),
+            COPPER_ORE = ITEMS.register("copper_ore", () -> new BlockItem(AllBlocks.COPPER_ORE.get(), new Item.Properties().group(FE.FEGroup))),
+            ALUMINUM_ORE = ITEMS.register("aluminum_ore", () -> new BlockItem(AllBlocks.ALUMINUM_ORE.get(), new Item.Properties().group(FE.FEGroup))),
+            GORAN_ORE = ITEMS.register("goran_ore", () -> new BlockItem(AllBlocks.GORAN_ORE.get(), new Item.Properties().group(FE.FEGroup))),
+            CERSEI_CRYSTAL_BLOCK = ITEMS.register("cersei_crystal_block", () -> new BlockItem(AllBlocks.CERSEI_CRYSTAL_BLOCK.get(), new Item.Properties().group(FE.FEGroup))),
+            CHARGED_CERSEI_CRYSTAL_BLOCK = ITEMS.register("charged_cersei_crystal_block", () -> new BlockItem(AllBlocks.CHARGED_CERSEI_CRYSTAL_BLOCK.get(), new Item.Properties().group(FE.FEGroup))),
 
             // Ingots
-            COPPER_INGOT = ITEMS.register("copper_ingot", () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS))),
-            ALUMINUM_INGOT = ITEMS.register("aluminum_ingot", () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS))),
-            GORAN_GEM = ITEMS.register("goran_gem", () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS))),
-            CERSEI_CRYSTAL = ITEMS.register("cersei_crystal", () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS))),
-            CHARGED_CERSEI_CRYSTAL = ITEMS.register("charged_cersei_crystal", () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS))),
+            COPPER_INGOT = ITEMS.register("copper_ingot", () -> new Item(new Item.Properties().group(FE.FEGroup))),
+            ALUMINUM_INGOT = ITEMS.register("aluminum_ingot", () -> new Item(new Item.Properties().group(FE.FEGroup))),
+            GORAN_GEM = ITEMS.register("goran_gem", () -> new Item(new Item.Properties().group(FE.FEGroup))),
+            CERSEI_CRYSTAL = ITEMS.register("cersei_crystal", () -> new Item(new Item.Properties().group(FE.FEGroup))),
+            CHARGED_CERSEI_CRYSTAL = ITEMS.register("charged_cersei_crystal", () -> new Item(new Item.Properties().group(FE.FEGroup))),
             GEAR_CLOCK = ITEMS.register("gear_clock", () -> new Item(new Item.Properties().group(FE.FEGroup))),
 
             //FluidBucket
-            WEIRD_SPRING_WATER_BUCKET = ITEMS.register("weird_spring_water_bucket", () -> new BucketItem(AllFluids.WEIRD_SPRING_WATER, new Item.Properties().group(ItemGroup.MISC).containerItem(BUCKET)));
+            WEIRD_SPRING_WATER_BUCKET = ITEMS.register("weird_spring_water_bucket", () -> new BucketItem(AllFluids.WEIRD_SPRING_WATER, new Item.Properties().group(FE.FEGroup).containerItem(BUCKET)));
 }
