@@ -37,6 +37,7 @@ public class FE {
         final IEventBus forgeEventBus = MinecraftForge.EVENT_BUS;
 
         modEventBus.addListener(FE::init);
+        modEventBus.addListener(AllBiomes::registerBiomes);
 
         AllItems.ITEMS.register(modEventBus);
         AllBlocks.BLOCKS.register(modEventBus);
@@ -47,7 +48,6 @@ public class FE {
     }
 
     public static void init(final FMLCommonSetupEvent event) {
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, AllBiomes.MOONLIGHT.getId()), 1000));
         LOGGER.info("Future Engineering Mod Started!");
     }
 

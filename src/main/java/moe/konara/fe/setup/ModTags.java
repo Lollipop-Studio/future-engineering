@@ -60,6 +60,8 @@ public class ModTags {
     }
 
     public static final class Fluids {
+        public static final ITag.INamedTag<Fluid> WIRED_SPRING_WATER = forge("fluids/wired_spring_water");
+
         private static ITag.INamedTag<Fluid> forge(String path) {
             return FluidTags.makeWrapperTag(new ResourceLocation("forge", path).toString());
         }

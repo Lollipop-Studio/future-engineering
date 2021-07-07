@@ -5,6 +5,7 @@ import moe.konara.fe.blocks.AllBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.fml.RegistryObject;
 
@@ -16,8 +17,10 @@ public class AllBlockStates extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         for (RegistryObject<Block> object : AllBlocks.BLOCKS.getEntries()) {
-            // TODO:  Remove this if the weird_spring_water texture is provided.
             if (object.get().matchesBlock(AllBlocks.WEIRD_SPRING_WATER_BLOCK.get())) {
+                ModelFile.ExistingModelFile ret = new ModelFile.ExistingModelFile(mcLoc("block/water"), this.models().existingFileHelper);
+                ret.assertExistence();
+                simpleBlock(object.get(), ret);
                 continue;
             }
             simpleBlock(object.get());
