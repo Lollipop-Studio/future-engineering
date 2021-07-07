@@ -1,9 +1,9 @@
 package moe.konara.fe;
 
-import moe.konara.fe.Fluids.AllFluids;
+import moe.konara.fe.fluids.AllFluids;
 import moe.konara.fe.blocks.AllBlocks;
 import moe.konara.fe.items.AllItems;
-import moe.konara.fe.world.AllBiomes;
+import moe.konara.fe.world.biome.AllBiomes;
 import moe.konara.fe.world.AllOreFeatures;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -23,7 +23,6 @@ public class FE {
     public static final String NAME = "FE";
     public static final String VERSION = "0.0.2-alpha";
     public static final Logger LOGGER = LogManager.getLogger();
-    public static IEventBus modEventBus;
     public static final ItemGroup FEGroup = new ItemGroup("fe_group") {
         @Override
         public @NotNull ItemStack createIcon() {
@@ -32,15 +31,19 @@ public class FE {
     };
 
     public FE() {
-        modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        final IEventBus forgeEventBus = MinecraftForge.EVENT_BUS;
+
+        //
         modEventBus.addListener(FE::init);
+
         AllItems.ITEMS.register(modEventBus);
         AllBlocks.BLOCKS.register(modEventBus);
         AllFluids.FLUIDS.register(modEventBus);
         AllBiomes.BIOMES.register(modEventBus);
 
-        MinecraftForge.EVENT_BUS.register(this);
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, AllOreFeatures::generateOres);
+        forgeEventBus.addListener(AllOreFeatures::generateOres);
+        forgeEventBus.addListener(AllBiomes::registerBiomes);
     }
 
     public static void init(final FMLCommonSetupEvent event) {

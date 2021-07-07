@@ -1,4 +1,4 @@
-package moe.konara.fe.world;
+package moe.konara.fe.world.biome;
 
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.biome.*;
@@ -7,13 +7,6 @@ import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 
 public class MoonLightBiome {
-
-    private static Biome moonlight;
-    public MoonLightBiome(){
-
-
-    }
-
     private static int getSkyColorWithTemperatureModifier(float temperature) {
         float lvt_1_1_ = temperature / 3.0F;
         lvt_1_1_ = MathHelper.clamp(lvt_1_1_, -1.0F, 1.0F);
@@ -43,7 +36,7 @@ public class MoonLightBiome {
 
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
-        moonlight = (new Biome.Builder())
+        Biome moonlight = (new Biome.Builder())
                 .precipitation(Biome.RainType.RAIN)
                 .category(Biome.Category.PLAINS)
                 .depth(0.125F)

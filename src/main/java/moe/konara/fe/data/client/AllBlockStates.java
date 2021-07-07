@@ -20,7 +20,6 @@ public class AllBlockStates extends BlockStateProvider {
             if (object.get().matchesBlock(AllBlocks.WEIRD_SPRING_WATER_BLOCK.get())) {
                 continue;
             }
-
             simpleBlock(object.get());
         }
     }

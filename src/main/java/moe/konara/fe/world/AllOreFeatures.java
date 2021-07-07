@@ -30,7 +30,6 @@ public class AllOreFeatures {
                                 8, 1, 60, 15));
                 break;
         }
-
     }
 
     private static ConfiguredFeature<?, ?> generateOre(RuleTest fillerType, BlockState state,

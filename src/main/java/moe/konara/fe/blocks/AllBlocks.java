@@ -1,7 +1,7 @@
 package moe.konara.fe.blocks;
 
 import moe.konara.fe.FE;
-import moe.konara.fe.Fluids.AllFluids;
+import moe.konara.fe.fluids.AllFluids;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;

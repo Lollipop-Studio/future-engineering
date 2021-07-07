@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "II",
+    "II"
+  ],
+  "key": {
+    "I": {
+      "item": "fe:charged_cersei_crystal"
+    }
+  },
+  "result": {
+    "item": "fe:charged_cersei_crystal_block"
+  }
+}

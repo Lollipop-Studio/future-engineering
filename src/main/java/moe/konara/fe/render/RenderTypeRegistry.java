@@ -1,6 +1,6 @@
 package moe.konara.fe.render;
 
-import moe.konara.fe.Fluids.AllFluids;
+import moe.konara.fe.fluids.AllFluids;
 import moe.konara.fe.blocks.AllBlocks;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;

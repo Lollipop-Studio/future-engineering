@@ -1,7 +1,6 @@
-package moe.konara.fe.data.common;
+package moe.konara.fe.data.common.tags;
 
 import moe.konara.fe.FE;
-import moe.konara.fe.blocks.AllBlocks;
 import moe.konara.fe.setup.ModTags;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
@@ -16,9 +15,9 @@ public class AllBlockTags extends BlockTagsProvider {
 
     @Override
     protected void registerTags() {
-        getOrCreateBuilder(ModTags.Blocks.Ores.ORES_COPPER).add(AllBlocks.COPPER_ORE.get());
-        getOrCreateBuilder(Tags.Blocks.ORES).addTag(ModTags.Blocks.Ores.ORES_COPPER);
-
-
+        ModTags.Blocks.Ores.ORES.forEach((obj) -> {
+            getOrCreateBuilder(obj.tag).add(obj.instance.get());
+            getOrCreateBuilder(Tags.Blocks.ORES).addTag(obj.tag);
+        });
     }
 }

@@ -1,4 +1,4 @@
-package moe.konara.fe.data.common;
+package moe.konara.fe.data.common.tags;
 
 import moe.konara.fe.FE;
 import net.minecraft.data.DataGenerator;

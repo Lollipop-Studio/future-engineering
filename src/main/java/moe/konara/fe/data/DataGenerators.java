@@ -2,7 +2,7 @@ package moe.konara.fe.data;
 
 import moe.konara.fe.data.client.AllBlockStates;
 import moe.konara.fe.data.client.AllItemModels;
-import moe.konara.fe.data.common.AllBlockTags;
+import moe.konara.fe.data.common.tags.AllBlockTags;
 import moe.konara.fe.data.common.AllCraftRecipes;
 import moe.konara.fe.data.common.AllLootTables;
 import net.minecraft.data.DataGenerator;
@@ -22,8 +22,8 @@ public final class DataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
         if (event.includeClient()) {
-            gen.addProvider(new AllItemModels(gen, existingFileHelper));
             gen.addProvider(new AllBlockStates(gen, existingFileHelper));
+            gen.addProvider(new AllItemModels(gen, existingFileHelper));
         }
 
         if (event.includeServer()) {

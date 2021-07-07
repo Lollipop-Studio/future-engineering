@@ -1,4 +1,4 @@
-package moe.konara.fe.Fluids;
+package moe.konara.fe.fluids;
 
 import moe.konara.fe.blocks.AllBlocks;
 import moe.konara.fe.items.AllItems;
