@@ -12,5 +12,6 @@
   "block.fe.charged_cersei_crystal_block": "充能瑟维晶块",
   "item.fe.gear_clock": "时钟齿轮",
   "fluid.fe.weird_spring_water": "诡异温泉",
-  "item.fe.weird_spring_water_bucket": "诡异温泉桶"
+  "item.fe.weird_spring_water_bucket": "诡异温泉桶",
+  "biome.fe.moonlight_biome": "月光之地"
 }

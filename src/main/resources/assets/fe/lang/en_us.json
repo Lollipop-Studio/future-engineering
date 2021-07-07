@@ -12,5 +12,6 @@
   "block.fe.charged_cersei_crystal_block": "Charged Cersei Crystal Block",
   "item.fe.gear_clock": "Gear Clock",
   "fluid.fe.weird_spring_water": "Weird Spring Water",
-  "item.fe.weird_spring_water_bucket": "Weird Spring Water Bucket"
+  "item.fe.weird_spring_water_bucket": "Weird Spring Water Bucket",
+  "biome.fe.moonlight_biome": "Land of moonlight"
 }
