@@ -9,5 +9,8 @@
   "item.fe.cersei_crystal": "瑟维晶体",
   "block.fe.cersei_crystal_block": "瑟维晶块",
   "item.fe.charged_cersei_crystal": "充能瑟维晶体",
-  "block.fe.charged_cersei_crystal_block": "充能瑟维晶块"
+  "block.fe.charged_cersei_crystal_block": "充能瑟维晶块",
+  "item.fe.gear_clock": "时钟齿轮",
+  "fluid.fe.weird_spring_water": "诡异温泉",
+  "item.fe.weird_spring_water_bucket": "诡异温泉桶"
 }
