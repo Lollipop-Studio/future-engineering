@@ -1,8 +1,16 @@
 package moe.konara.fe.world;
 
+import moe.konara.fe.blocks.AllBlocks;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.*;
+import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
+import net.minecraft.world.gen.placement.ChanceConfig;
+import net.minecraft.world.gen.placement.Placement;
+import net.minecraft.world.gen.placement.TopSolidRangeConfig;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 
@@ -30,7 +38,11 @@ public class MoonLightBiome {
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL);
         DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
-        DefaultBiomeFeatures.withLavaAndWaterLakes(biomegenerationsettings$builder);
+
+        ConfiguredFeature<?, ?> WEIRD_LAKE = register("weird_lake", Feature.LAKE.withConfiguration(new BlockStateFeatureConfig(AllBlocks.WEIRD_SPRING_WATER_BLOCK.get().getDefaultState())).withPlacement(Placement.WATER_LAKE.configure(new ChanceConfig(10))));
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, WEIRD_LAKE);
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
+
         DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withNoiseTallGrass(biomegenerationsettings$builder);
 
@@ -40,7 +52,6 @@ public class MoonLightBiome {
         DefaultBiomeFeatures.withPlainGrassVegetation(biomegenerationsettings$builder);
 
         DefaultBiomeFeatures.withNormalMushroomGeneration(biomegenerationsettings$builder);
-
         DefaultBiomeFeatures.withLavaAndWaterSprings(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFrozenTopLayer(biomegenerationsettings$builder);
         moonlight = (new Biome.Builder())
@@ -52,10 +63,12 @@ public class MoonLightBiome {
                 .downfall(0.4F)
                 .setEffects(
                         (new BiomeAmbience.Builder())
-                                .setWaterColor(0xFEFEFF)
-                                .setWaterFogColor(329011)
+                                .withGrassColor(0x46747A)
+                                .setWaterColor(0x28323B)
+                                .setWaterFogColor(0x1C2836)
                                 .setFogColor(0xEAD8F8)
-                                .withSkyColor(getSkyColorWithTemperatureModifier(0.8F))
+                                .withFoliageColor(0x70718E)
+                                .withSkyColor(0x1E2035/*getSkyColorWithTemperatureModifier(0.8F)*/)
                                 .setMoodSound(MoodSoundAmbience.DEFAULT_CAVE)
                                 .build()
                 )
@@ -63,5 +76,9 @@ public class MoonLightBiome {
                 .withGenerationSettings(biomegenerationsettings$builder.build())
                 .build();
         return moonlight;
+    }
+
+    private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
+        return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, key, configuredFeature);
     }
 }
