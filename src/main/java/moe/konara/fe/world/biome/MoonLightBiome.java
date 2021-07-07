@@ -10,7 +10,6 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.placement.ChanceConfig;
 import net.minecraft.world.gen.placement.Placement;
-import net.minecraft.world.gen.placement.TopSolidRangeConfig;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 

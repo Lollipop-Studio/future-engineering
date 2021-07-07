@@ -7,8 +7,10 @@ import moe.konara.fe.world.biome.AllBiomes;
 import moe.konara.fe.world.AllOreFeatures;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.RegistryKey;
+import net.minecraft.util.registry.Registry;
+import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -42,10 +44,10 @@ public class FE {
         AllBiomes.BIOMES.register(modEventBus);
 
         forgeEventBus.addListener(AllOreFeatures::generateOres);
-        forgeEventBus.addListener(AllBiomes::registerBiomes);
     }
 
     public static void init(final FMLCommonSetupEvent event) {
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, AllBiomes.MOONLIGHT.getId()), 1000));
         LOGGER.info("Future Engineering Mod Started!");
     }
 
