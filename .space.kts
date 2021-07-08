@@ -9,7 +9,6 @@ job("Default") {
         kotlinScript { api ->
             // here can be your complex logic
             api.gradlew("build")
-            api.gradlew("runData")
             api.gradlew("publish")
         }
     }
