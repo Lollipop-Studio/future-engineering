@@ -1,4 +1,4 @@
-package moe.konara.fe.setup;
+package moe.konara.fe.data.common.tags;
 
 import com.google.common.collect.Maps;
 import moe.konara.fe.FE;

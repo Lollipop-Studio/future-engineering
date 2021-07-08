@@ -26,17 +26,6 @@ public class AllItemModels extends ItemModelProvider {
                 builder(itemGenerator, item.getId().getPath());
             }
         }
-        // Blocks
-//        withExistingParent("copper_ore", modLoc("block/copper_ore"));
-//        withExistingParent("aluminum_ore", modLoc("block/aluminum_ore"));
-//        withExistingParent("goran_ore", modLoc("block/goran_ore"));
-//        withExistingParent("cersei_crystal_block", modLoc("block/cersei_crystal_block"));
-        // Items
-//        builder(itemGenerator, "copper_ingot");
-//        builder(itemGenerator, "aluminum_ingot");
-//        builder(itemGenerator, "goran_gem");
-//        builder(itemGenerator, "cersei_crystal");
-//        builder(itemGenerator, "weird_spring_water_bucket");
     }
 
     private ItemModelBuilder builder(ModelFile itemGenerated, String name) {

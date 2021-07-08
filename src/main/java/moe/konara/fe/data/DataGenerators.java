@@ -5,6 +5,7 @@ import moe.konara.fe.data.client.AllItemModels;
 import moe.konara.fe.data.common.tags.AllBlockTags;
 import moe.konara.fe.data.common.AllCraftRecipes;
 import moe.konara.fe.data.common.AllLootTables;
+import moe.konara.fe.data.common.tags.AllFluidTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -28,6 +29,7 @@ public final class DataGenerators {
 
         if (event.includeServer()) {
             gen.addProvider(new AllBlockTags(gen, existingFileHelper));
+            gen.addProvider(new AllFluidTags(gen, existingFileHelper));
             gen.addProvider(new AllLootTables(gen));
             gen.addProvider(new AllCraftRecipes(gen));
         }
