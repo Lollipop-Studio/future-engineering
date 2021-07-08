@@ -110,13 +110,28 @@ jar.finalizedBy('reobfJar')
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
-            artifact jar
+        maven(MavenPublication) {
+            groupId = 'moe.konara'
+            artifactId = 'fe'
+            version = "${version}"
+            from components.java
+
+            pom {
+                name = 'future-engineering'
+                description = 'FE lib'
+            }
         }
     }
     repositories {
         maven {
-            url "file:///${project.projectDir}/mcmodsrepo"
+            credentials {
+                // Automation has a special account for authentication in Space
+                // account credentials are accessible via env vars
+                username = "$System.env.JB_SPACE_CLIENT_ID"
+                password = "$System.env.JB_SPACE_CLIENT_SECRET"
+            }
+
+            url = "https://maven.pkg.jetbrains.space/booling/p/fe/future-engineering"
         }
     }
 }
