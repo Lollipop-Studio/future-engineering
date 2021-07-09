@@ -20,7 +20,7 @@ import org.jetbrains.annotations.NotNull;
 public class FE {
     public static final String ID = "fe";
     public static final String NAME = "FE";
-    public static final String VERSION = "0.0.5-alpha";
+    public static final String VERSION = "0.0.6-alpha";
     public static final Logger LOGGER = LogManager.getLogger();
     public static final ItemGroup FEGroup = new ItemGroup("fe_group") {
         @Override

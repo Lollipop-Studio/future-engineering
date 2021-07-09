@@ -20,7 +20,7 @@ apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '0.0.5-alpha'
+version = '0.0.6-alpha'
 group = 'moe.konara.fe'
 archivesBaseName = 'fe'
 
@@ -142,8 +142,8 @@ publishing {
             credentials {
                 // Automation has a special account for authentication in Space
                 // account credentials are accessible via env vars
-                username = "$System.env.JB_SPACE_CLIENT_ID"
-                password = "$System.env.JB_SPACE_CLIENT_SECRET"
+                username = "Konara"
+                password = "eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiIxc0lJdzExaE9zSEgiLCJhdWQiOiJjaXJjbGV0LXdlYi11aSIsIm9yZ0RvbWFpbiI6ImJvb2xpbmciLCJuYW1lIjoiS29uYXJhIiwiaXNzIjoiaHR0cHM6XC9cL2pldGJyYWlucy5zcGFjZSIsInBlcm1fdG9rZW4iOiI0MzhZbjQyWkozOXMiLCJwcmluY2lwYWxfdHlwZSI6IlVTRVIiLCJpYXQiOjE2MjU4MTkxNzd9.DAtzq9hULqVQeStJ2U6TmOoBmgiXQQkkuHH5mBOTtP61QDX_NlXqBMo8uzs-zbTyyEa0wC45vUBBZw4vwzD2uW7iCB2JkDg2ktMjYNc4RoWu7oQvg5PefuRXIPrU3HC5BpYvcFW-8CdPJANkbQi2MiF3pJb-UEu5Adb1We7qwBo"
             }
 
             url = "https://maven.pkg.jetbrains.space/booling/p/fe/future-engineering"
