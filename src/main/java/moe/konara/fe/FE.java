@@ -1,15 +1,12 @@
 package moe.konara.fe;
 
-import moe.konara.fe.fluids.AllFluids;
 import moe.konara.fe.blocks.AllBlocks;
+import moe.konara.fe.fluids.AllFluids;
 import moe.konara.fe.items.AllItems;
-import moe.konara.fe.world.biome.AllBiomes;
 import moe.konara.fe.world.AllOreFeatures;
+import moe.konara.fe.world.biome.AllBiomes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.RegistryKey;
-import net.minecraft.util.registry.Registry;
-import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;

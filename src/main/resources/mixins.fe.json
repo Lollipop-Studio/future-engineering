@@ -1,0 +1,9 @@
+{
+  "compatibilityLevel": "JAVA_8",
+  "package": "moe.konara.fe.mixin",
+  "mixins": [
+
+  ],
+  "client": [],
+  "server": []
+}

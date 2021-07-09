@@ -1,13 +1,22 @@
 buildscript {
     repositories {
-        maven { url = 'https://files.minecraftforge.net/maven' }
+        maven {
+            name = 'Forge'
+            url = 'https://files.minecraftforge.net/maven'
+        }
+        maven {
+            name = 'Sponge'
+            url = 'https://repo.spongepowered.org/maven'
+        }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '4.1.+', changing: true
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
@@ -70,6 +79,10 @@ minecraft {
     }
 }
 
+mixin {
+    add sourceSets.main, "mixins.fe.json"
+}
+
 sourceSets.main.resources {
     srcDir 'src/generated/resources'
     exclude '.cache'
@@ -90,6 +103,8 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-1.16.4:${jei_version}:api")
     runtimeOnly fg.deobf("mezz.jei:jei-1.16.4:${jei_version}")
     minecraft 'net.minecraftforge:forge:1.16.5-36.1.4'
+    compile 'org.spongepowered:mixin:0.8.3'
+    annotationProcessor 'org.spongepowered:mixin:0.8.3:processor'
 }
 
 jar {

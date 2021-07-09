@@ -1,7 +1,6 @@
 package moe.konara.fe.data.common.tags;
 
 import moe.konara.fe.FE;
-import moe.konara.fe.setup.ModTags;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.Tags;
