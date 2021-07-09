@@ -6,10 +6,18 @@
 
 job("Default") {
     container(displayName = "Run gradle build", image = "openjdk:11") {
-        kotlinScript { api ->
+        /*kotlinScript { api ->
             // here can be your complex logic
             api.gradlew("build")
             api.gradlew("publish")
+        }*/
+        shellScript {
+            location = "./gradlew"
+            args("build")
+        }
+        shellScript {
+            location = "./gradlew"
+            args("publish")
         }
     }
 }
