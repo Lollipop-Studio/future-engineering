@@ -1,36 +1,30 @@
 package moe.konara.fe.data.common.tags;
 
-import com.google.common.collect.Maps;
 import moe.konara.fe.FE;
 import moe.konara.fe.blocks.AllBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.item.Item;
-import net.minecraft.tags.*;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.FluidTags;
+import net.minecraft.tags.ITag;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
 public class ModTags {
-    public static final Map<ITag.INamedTag<Block>, Block> BLOCK_TAGS = Maps.newHashMap();
-    public static final Map<ITag.INamedTag<Item>, Item> ITEM_TAGS = Maps.newHashMap();
-    public static final Map<ITag.INamedTag<Fluid>, Fluid> FLUID_TAGS = Maps.newHashMap();
-
     public static final class Blocks {
         public static final class Ores {
-            public static final List<TagObject<Block>> ORES = new LinkedList<>();
-//            public static final ITag.INamedTag<Block>
-//                    ORES_COPPER = forge("ores/copper"),
-//                    ORES_ALUMINUM = forge("ores/aluminum");
 
+            // Ore Blocks
+            public static final List<TagObject<Block>> ORES = new LinkedList<>();
             public static final TagObject<Block>
                     ORES_ALUMINUM = registerOreTag(forge("ores/aluminum"), AllBlocks.ALUMINUM_ORE),
                     ORES_COPPER = registerOreTag(forge("ores/copper"), AllBlocks.COPPER_ORE);
-
 
             private static TagObject<Block> registerOreTag(ITag.INamedTag<Block> tag, RegistryObject<Block> instance) {
                 TagObject<Block> obj = new TagObject<>(tag, instance);
@@ -50,6 +44,8 @@ public class ModTags {
     }
 
     public static final class Items {
+
+
         private static ITag.INamedTag<Item> forge(String path) {
             return ItemTags.makeWrapperTag(new ResourceLocation("forge", path).toString());
         }
