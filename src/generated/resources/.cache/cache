@@ -30,7 +30,11 @@ b057c83a5ca6effa81310babb11b3e9d90c82b3b data/fe/loot_tables/blocks/copper_ore.j
 3e829efe3d2798774e9bd0a43af69a1a62a33f96 data/fe/recipes/cersei_crystal_block.json
 6f1dac1b23d8e810a9997b63eab9bb8f1671430c data/fe/recipes/charged_cersei_crystal_block.json
 86b4558d68587d1d698828e025fbea2a17f513f4 data/fe/recipes/copper_ingot.json
-02778d5d76796335416bc32fc5edebf9fd21f5b6 data/forge/tags/blocks/ores.json
+0b255840e04504055628d5c001a52d1711886392 data/forge/tags/blocks/ore/goran.json
+e48cef9abc94594f6a183f12ea57d26f7bb64f4e data/forge/tags/blocks/ores.json
 6ed5306c1abfaf2f72e9e24e4596f288df060eb3 data/forge/tags/blocks/ores/aluminum.json
 42e4bb0d8142f78fb21eba72237f5ec12969dd71 data/forge/tags/blocks/ores/copper.json
+3a82c9845d22a28f1c85c2dc8c2f3fdd434e8030 data/forge/tags/blocks/storage_blocks.json
+27c4dcb445cf8274c43a805a67f78e9ed6f22088 data/forge/tags/blocks/storage_blocks/cersei_crystal_block.json
+b2fd3295c9f07678811cfc320c7daf6217d535fb data/forge/tags/blocks/storage_blocks/charged_cersei_crystal_block.json
 07e42bda26c49afce52291fdbefca70dbc88a506 data/minecraft/tags/fluids/water.json

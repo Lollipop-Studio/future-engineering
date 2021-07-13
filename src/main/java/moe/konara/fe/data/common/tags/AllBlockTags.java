@@ -18,5 +18,10 @@ public class AllBlockTags extends BlockTagsProvider {
             getOrCreateBuilder(obj.tag).add(obj.instance.get());
             getOrCreateBuilder(Tags.Blocks.ORES).addTag(obj.tag);
         });
+        ModTags.Blocks.StorageBlocks.STORAGE_BLOCKS.forEach((obj) -> {
+            getOrCreateBuilder(obj.tag).add(obj.instance.get());
+            getOrCreateBuilder(Tags.Blocks.STORAGE_BLOCKS).addTag(obj.tag);
+        });
+
     }
 }
