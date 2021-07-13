@@ -5,11 +5,5 @@
 */
 
 job("Default") {
-    container(displayName = "Run gradle build", image = "openjdk:11") {
-        kotlinScript { api ->
-            // here can be your complex logic
-            api.gradlew("build")
-            api.gradlew("publish")
-        }
-    }
+    gradlew("openjdk:11", "publish")
 }

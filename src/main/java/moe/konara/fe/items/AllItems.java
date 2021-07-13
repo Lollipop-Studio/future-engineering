@@ -27,6 +27,8 @@ public class AllItems {
             // Ingots
             COPPER_INGOT = ITEMS.register("copper_ingot", () -> new Item(new Item.Properties().group(FE.FEGroup))),
             ALUMINUM_INGOT = ITEMS.register("aluminum_ingot", () -> new Item(new Item.Properties().group(FE.FEGroup))),
+
+            //Gems
             GORAN_GEM = ITEMS.register("goran_gem", () -> new Item(new Item.Properties().group(FE.FEGroup))),
             CERSEI_CRYSTAL = ITEMS.register("cersei_crystal", () -> new Item(new Item.Properties().group(FE.FEGroup))),
             CHARGED_CERSEI_CRYSTAL = ITEMS.register("charged_cersei_crystal", () -> new Item(new Item.Properties().group(FE.FEGroup))),
