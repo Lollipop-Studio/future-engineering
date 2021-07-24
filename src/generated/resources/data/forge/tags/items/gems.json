@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:gems/goran_gem",
+    "#forge:gems/cersei_crystal",
+    "#forge:gems/charged_cersei_crystal"
+  ]
+}

@@ -32,8 +32,15 @@ public class AllItems {
             GORAN_GEM = ITEMS.register("goran_gem", () -> new Item(new Item.Properties().group(FE.FEGroup))),
             CERSEI_CRYSTAL = ITEMS.register("cersei_crystal", () -> new Item(new Item.Properties().group(FE.FEGroup))),
             CHARGED_CERSEI_CRYSTAL = ITEMS.register("charged_cersei_crystal", () -> new Item(new Item.Properties().group(FE.FEGroup))),
-            GEAR_CLOCK = ITEMS.register("gear_clock", () -> new Item(new Item.Properties().group(FE.FEGroup))),
+
+            // Logs
+            MOON_LOG = ITEMS.register("moon_log", () -> new BlockItem(AllBlocks.MOON_LOG.get(), new Item.Properties().group(FE.FEGroup))),
+            STRIPPED_MOON_LOG = ITEMS.register("stripped_moon_log", () -> new BlockItem(AllBlocks.STRIPPED_MOON_LOG.get(), new Item.Properties().group(FE.FEGroup))),
 
             //FluidBucket
-            WEIRD_SPRING_WATER_BUCKET = ITEMS.register("weird_spring_water_bucket", () -> new BucketItem(AllFluids.WEIRD_SPRING_WATER, new Item.Properties().group(FE.FEGroup).containerItem(BUCKET)));
+            WEIRD_SPRING_WATER_BUCKET = ITEMS.register("weird_spring_water_bucket", () -> new BucketItem(AllFluids.WEIRD_SPRING_WATER, new Item.Properties().group(FE.FEGroup).containerItem(BUCKET))),
+
+            // Others
+            GEAR_CLOCK = ITEMS.register("gear_clock", () -> new Item(new Item.Properties().group(FE.FEGroup)));
+
 }

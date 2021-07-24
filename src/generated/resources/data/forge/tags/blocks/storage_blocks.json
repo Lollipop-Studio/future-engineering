@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:storage_blocks/cersei_crystal_block",
+    "#forge:storage_blocks/charged_cersei_crystal_block"
+  ]
+}

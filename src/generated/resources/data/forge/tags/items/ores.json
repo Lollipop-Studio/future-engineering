@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:ores/copper_ore",
+    "#forge:ores/aluminum_ore",
+    "#forge:ores/goran_ore",
+    "#forge:ores/cersei_crystal_block",
+    "#forge:ores/charged_cersei_crystal_block"
+  ]
+}

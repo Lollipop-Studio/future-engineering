@@ -41,6 +41,8 @@ public class AllLootTables extends ForgeLootTableProvider {
             registerDropSelfLootTable(AllBlocks.COPPER_ORE.get());
             registerDropSelfLootTable(AllBlocks.ALUMINUM_ORE.get());
             registerDropSelfLootTable(AllBlocks.GORAN_ORE.get());
+            registerDropSelfLootTable(AllBlocks.MOON_LOG.get());
+            registerDropSelfLootTable(AllBlocks.STRIPPED_MOON_LOG.get());
             registerLootTable(AllBlocks.CERSEI_CRYSTAL_BLOCK.get(),
                     (cersei_crystal_block) ->
                             droppingWithSilkTouch(cersei_crystal_block,
