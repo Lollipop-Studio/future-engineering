@@ -23,6 +23,7 @@ public class AllItems {
             GORAN_ORE = ITEMS.register("goran_ore", () -> new BlockItem(AllBlocks.GORAN_ORE.get(), new Item.Properties().group(FE.FEGroup))),
             CERSEI_CRYSTAL_BLOCK = ITEMS.register("cersei_crystal_block", () -> new BlockItem(AllBlocks.CERSEI_CRYSTAL_BLOCK.get(), new Item.Properties().group(FE.FEGroup))),
             CHARGED_CERSEI_CRYSTAL_BLOCK = ITEMS.register("charged_cersei_crystal_block", () -> new BlockItem(AllBlocks.CHARGED_CERSEI_CRYSTAL_BLOCK.get(), new Item.Properties().group(FE.FEGroup))),
+            MAGMA_OBSIDIAN = ITEMS.register("magma_obsidian", () -> new BlockItem(AllBlocks.MAGMA_OBSIDIAN.get(), new Item.Properties().group(FE.FEGroup))),
 
             // Ingots
             COPPER_INGOT = ITEMS.register("copper_ingot", () -> new Item(new Item.Properties().group(FE.FEGroup))),

@@ -57,8 +57,16 @@ public class AllBlocks {
                             .hardnessAndResistance(50.0F, 5.0F)
             )),
             MOON_LOG = BLOCKS.register("moon_log", () -> createLogBlock(MaterialColor.BLUE, MaterialColor.GRAY)),
-            STRIPPED_MOON_LOG = BLOCKS.register("stripped_moon_log", () -> new RotatedPillarBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.0F).sound(SoundType.WOOD)))
-
+            STRIPPED_MOON_LOG = BLOCKS.register("stripped_moon_log", () -> new RotatedPillarBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.0F).sound(SoundType.WOOD))),
+            MAGMA_OBSIDIAN = BLOCKS.register("magma_obsidian", () -> new MagmaObsidian(
+                    AbstractBlock.Properties
+                            .create(Material.ROCK)
+                            .harvestTool(ToolType.PICKAXE)
+                            .setRequiresTool()
+                            .sound(SoundType.STONE)
+                            .hardnessAndResistance(50.0F, 5.0F)
+                            .setLightLevel((lightLevel) -> 10)
+            ))
     ;
     //Fluid Block
     public static final RegistryObject<FlowingFluidBlock>
