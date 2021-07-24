@@ -3,7 +3,9 @@ e41aae97fbfe87ab9bebb987dae05fc8492738ba assets/fe/blockstates/cersei_crystal_bl
 0747fa7d0974b80783006f9b4cb01783b452530f assets/fe/blockstates/charged_cersei_crystal_block.json
 747aa6f3e60d6bb6dfa9b86b41bbe6c4cb38ebe2 assets/fe/blockstates/copper_ore.json
 81b75500bd5cdd1e40c2ae301774f7b450d69863 assets/fe/blockstates/goran_ore.json
+48ce73ec6324572e9d71b73e7cb00ddb8e64e906 assets/fe/blockstates/magma_obsidian.json
 368c0ab5bfc487e46cce16c46eb90da19035a5ad assets/fe/blockstates/moon_log.json
+4e0d61794371fa7c9039b3a5f645cac38fb2d4d4 assets/fe/blockstates/moon_tree_leave.json
 3a9836a93c69a25294d5d1d5a57c60b4241064a3 assets/fe/blockstates/stripped_moon_log.json
 a25eec65ecd6c1bf392d745f2490f5593c181131 assets/fe/blockstates/weird_spring_water.json
 c258699f0295da360503b3526ce814afd6f08cdd assets/fe/models/block/aluminum_ore.json
@@ -11,8 +13,10 @@ c258699f0295da360503b3526ce814afd6f08cdd assets/fe/models/block/aluminum_ore.jso
 066ff650c91f47a0e2552bcb6c5651a49c77c965 assets/fe/models/block/charged_cersei_crystal_block.json
 91270094f233c4fd499fb912b2ff739dce99e886 assets/fe/models/block/copper_ore.json
 ebfaff5e32c74899974aa9646f7b91729c148f15 assets/fe/models/block/goran_ore.json
+8c5d0228ab7d71e7d346822bb5e3be03d8e12663 assets/fe/models/block/magma_obsidian.json
 3c4f8151967a38f2ea4370de30f65c97604b2a4d assets/fe/models/block/moon_log.json
 0d5296d43b0b46a81284d79912ffc795e8e0cdac assets/fe/models/block/moon_log_horizontal.json
+b30ddb629ec91ae442a755623f5334460976e94a assets/fe/models/block/moon_tree_leave.json
 1ad703afc5a0b551162579a4b6ad3c4630720d42 assets/fe/models/block/stripped_moon_log.json
 d0ffa384eced97ee48a73672c78244513904c0fc assets/fe/models/block/stripped_moon_log_horizontal.json
 25a8ec1fbb786b25551e1167c0bc883886ebd5f8 assets/fe/models/item/aluminum_ingot.json
@@ -26,7 +30,9 @@ b875a365221657d9fcf38377a37b373dfc8e48eb assets/fe/models/item/copper_ingot.json
 ad1c574fa6666876cf1a46956977a48d1e2180be assets/fe/models/item/gear_clock.json
 9e79d3a650159f1c025d517e120d548760960582 assets/fe/models/item/goran_gem.json
 dcafac15a438dabd028a78577de616f4c320c421 assets/fe/models/item/goran_ore.json
+93045daa123e51ac71fe4f99c92cc11e0ad888d7 assets/fe/models/item/magma_obsidian.json
 d832156b1f2220f614a7dde37b903b98121b456c assets/fe/models/item/moon_log.json
+f2875c887c61f9e6817e1336c8303a4c9122577b assets/fe/models/item/moon_tree_leave.json
 5497e757bb75fffccd5d050e1a2388be67554be4 assets/fe/models/item/stripped_moon_log.json
 ab1d788310c6f443643009dc5ddd7bb6e968a204 assets/fe/models/item/weird_spring_water_bucket.json
 dcd84f39392d9f278b94ca046eaaf6b7ec7ce8da data/fe/loot_tables/blocks/aluminum_ore.json
@@ -34,7 +40,9 @@ f1d9e39d5b1c199910eaf368fa2eb3a482287337 data/fe/loot_tables/blocks/cersei_cryst
 84849392c00066ebe5287661c209d85f205275fe data/fe/loot_tables/blocks/charged_cersei_crystal_block.json
 b057c83a5ca6effa81310babb11b3e9d90c82b3b data/fe/loot_tables/blocks/copper_ore.json
 5a5b4534646f80b8d566722903e9962b4e45f7d8 data/fe/loot_tables/blocks/goran_ore.json
+87f53a748502eaf04236a53b5b46f7597fbaea8e data/fe/loot_tables/blocks/magma_obsidian.json
 d1feda1e50edd75aa2dbb597902e96419f40c76d data/fe/loot_tables/blocks/moon_log.json
+19fcd2bde348c6c0fc563234459c497b329632c8 data/fe/loot_tables/blocks/moon_tree_leave.json
 7a47254dcd85477c179ed7d67b831473da390cfa data/fe/loot_tables/blocks/stripped_moon_log.json
 8cd0cf6801362664e70aa19a03d308f6f5c89fe2 data/fe/recipes/aluminum_ingot.json
 3e829efe3d2798774e9bd0a43af69a1a62a33f96 data/fe/recipes/cersei_crystal_block.json
