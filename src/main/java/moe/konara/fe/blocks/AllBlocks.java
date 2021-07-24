@@ -16,11 +16,11 @@ public class AllBlocks {
 
     public static final RegistryObject<Block>
             COPPER_ORE = BLOCKS.register("copper_ore", () -> new OreBlock(
-            AbstractBlock.Properties
-                    .create(Material.ROCK)
-                    .harvestTool(ToolType.PICKAXE)
-                    .setRequiresTool()
-                    .hardnessAndResistance(3.0F, 3.0F)
+                    AbstractBlock.Properties
+                            .create(Material.ROCK)
+                            .harvestTool(ToolType.PICKAXE)
+                            .setRequiresTool()
+                            .hardnessAndResistance(3.0F, 3.0F)
     )),
             ALUMINUM_ORE = BLOCKS.register("aluminum_ore", () -> new OreBlock(
                     AbstractBlock.Properties
@@ -78,4 +78,11 @@ public class AllBlocks {
         return new RotatedPillarBlock(AbstractBlock.Properties.create(Material.WOOD, (state) -> state.get(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? topColor : barkColor).hardnessAndResistance(2.0F).sound(SoundType.WOOD));
     }
 
+    //Leaves
+    public static final RegistryObject<LeavesBlock>
+            MOON_TREE_LEAVE = BLOCKS.register("moon_tree_leave", () -> new LeavesBlock(
+                    AbstractBlock.Properties
+                            .create(Material.LEAVES)
+                            .notSolid()
+    ));
 }

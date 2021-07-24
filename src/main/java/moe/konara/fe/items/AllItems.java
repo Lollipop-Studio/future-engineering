@@ -42,6 +42,8 @@ public class AllItems {
             WEIRD_SPRING_WATER_BUCKET = ITEMS.register("weird_spring_water_bucket", () -> new BucketItem(AllFluids.WEIRD_SPRING_WATER, new Item.Properties().group(FE.FEGroup).containerItem(BUCKET))),
 
             // Others
-            GEAR_CLOCK = ITEMS.register("gear_clock", () -> new Item(new Item.Properties().group(FE.FEGroup)));
+            GEAR_CLOCK = ITEMS.register("gear_clock", () -> new Item(new Item.Properties().group(FE.FEGroup))),
 
+            //Leaves
+            MOON_TREE_LEAVE = ITEMS.register("moon_tree_leave", () -> new BlockItem(AllBlocks.MOON_TREE_LEAVE.get(), new Item.Properties().group(FE.FEGroup)));
 }
