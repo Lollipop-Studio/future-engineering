@@ -92,7 +92,7 @@ public class AllBlocks {
     ));
 
     public static void addStripping() throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
-        Class clazz = Class.forName("net.minecraft.item.AxeItem");
+        Class<?> clazz = Class.forName("net.minecraft.item.AxeItem");
         Field map = clazz.getDeclaredField("BLOCK_STRIPPING_MAP");
 
         Field modifiersField = Field.class.getDeclaredField("modifiers");
