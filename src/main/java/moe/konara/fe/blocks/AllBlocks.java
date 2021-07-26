@@ -11,6 +11,11 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+import java.util.HashMap;
+import java.util.Map;
+
 public class AllBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, FE.ID);
 
@@ -21,7 +26,7 @@ public class AllBlocks {
                             .harvestTool(ToolType.PICKAXE)
                             .setRequiresTool()
                             .hardnessAndResistance(3.0F, 3.0F)
-    )),
+            )),
             ALUMINUM_ORE = BLOCKS.register("aluminum_ore", () -> new OreBlock(
                     AbstractBlock.Properties
                             .create(Material.ROCK)
@@ -85,4 +90,19 @@ public class AllBlocks {
                             .create(Material.LEAVES)
                             .notSolid()
     ));
+
+    public static void addStripping() throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
+        Class clazz = Class.forName("net.minecraft.item.AxeItem");
+        Field map = clazz.getDeclaredField("BLOCK_STRIPPING_MAP");
+
+        Field modifiersField = Field.class.getDeclaredField("modifiers");
+        modifiersField.setAccessible(true);
+        modifiersField.setInt(map, map.getModifiers() & ~Modifier.FINAL);
+
+        map.setAccessible(true);
+        Map<Block, Block> strip_map = (Map<Block, Block>) map.get(null);
+        HashMap<Block, Block> new_map = new HashMap<>(strip_map);
+        new_map.put(AllBlocks.MOON_LOG.get(), AllBlocks.STRIPPED_MOON_LOG.get());
+        map.set(null, new_map);
+    }
 }

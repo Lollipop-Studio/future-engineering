@@ -45,6 +45,12 @@ public class FE {
     }
 
     public static void init(final FMLCommonSetupEvent event) {
+        try {
+            AllBlocks.addStripping();
+        }catch(Exception e)
+        {
+            e.printStackTrace();
+        }
         LOGGER.info("Future Engineering Mod Started!");
     }
 
