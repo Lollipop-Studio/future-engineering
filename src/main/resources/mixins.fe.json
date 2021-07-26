@@ -1,6 +1,7 @@
 {
   "compatibilityLevel": "JAVA_8",
   "package": "moe.konara.fe.mixin",
+  "minVersion": "",
   "mixins": [
 
   ],

@@ -15,6 +15,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
+import org.spongepowered.asm.launch.MixinBootstrap;
+import org.spongepowered.asm.mixin.Mixins;
 
 @Mod(FE.ID)
 public class FE {
@@ -30,6 +32,9 @@ public class FE {
     };
 
     public FE() {
+        MixinBootstrap.init();
+        Mixins.addConfiguration("mixins.fe.json");
+
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         final IEventBus forgeEventBus = MinecraftForge.EVENT_BUS;
 
@@ -47,8 +52,7 @@ public class FE {
     public static void init(final FMLCommonSetupEvent event) {
         try {
             AllBlocks.addStripping();
-        }catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         LOGGER.info("Future Engineering Mod Started!");
