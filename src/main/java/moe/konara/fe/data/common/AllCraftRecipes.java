@@ -3,10 +3,7 @@ package moe.konara.fe.data.common;
 import moe.konara.fe.blocks.AllBlocks;
 import moe.konara.fe.items.AllItems;
 import net.minecraft.advancements.criterion.InventoryChangeTrigger;
-import net.minecraft.data.CookingRecipeBuilder;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.data.ShapedRecipeBuilder;
+import net.minecraft.data.*;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraftforge.common.data.ForgeRecipeProvider;
 
@@ -33,5 +30,8 @@ public class AllCraftRecipes extends ForgeRecipeProvider {
                 .key('I', AllItems.CHARGED_CERSEI_CRYSTAL.get())
                 .addCriterion("charged_cersei_crystal_block", InventoryChangeTrigger.Instance.forItems(AllItems.CHARGED_CERSEI_CRYSTAL.get()))
                 .build(consumer);
+//        ShapelessRecipeBuilder.shapelessRecipe(AllItems.MOON_SAPLING.get())
+//                .addIngredient()
+
     }
 }

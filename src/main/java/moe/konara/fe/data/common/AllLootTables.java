@@ -44,7 +44,7 @@ public class AllLootTables extends ForgeLootTableProvider {
             registerDropSelfLootTable(AllBlocks.MOON_LOG.get());
             registerDropSelfLootTable(AllBlocks.STRIPPED_MOON_LOG.get());
             registerDropSelfLootTable(AllBlocks.MAGMA_OBSIDIAN.get());
-            registerDropSelfLootTable(AllBlocks.MOON_TREE_LEAVE.get());
+            registerDropSelfLootTable(AllBlocks.MOON_SAPLING.get());
             registerLootTable(AllBlocks.CERSEI_CRYSTAL_BLOCK.get(),
                     (cersei_crystal_block) ->
                             droppingWithSilkTouch(cersei_crystal_block,
@@ -67,6 +67,10 @@ public class AllLootTables extends ForgeLootTableProvider {
                                             .acceptFunction(SetCount.builder(RandomValueRange.of(1.0F, 3.0F)))
                                             .acceptFunction(ApplyBonus.uniformBonusCount(Enchantments.FORTUNE))
                                             .acceptFunction(LimitCount.func_215911_a(IntClamper.func_215843_a(1, 4)))));
+            registerLootTable(AllBlocks.MOON_TREE_LEAVE.get(),
+                    (moon_tree_leave) ->
+                            droppingWithChancesAndSticks(moon_tree_leave, AllBlocks.MOON_SAPLING.get(), 0.05F, 0.0625F, 0.083333336F, 0.1F)
+                    );
         }
 
         @Override
