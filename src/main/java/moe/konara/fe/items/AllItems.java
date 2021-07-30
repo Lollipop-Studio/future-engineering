@@ -45,5 +45,9 @@ public class AllItems {
             GEAR_CLOCK = ITEMS.register("gear_clock", () -> new Item(new Item.Properties().group(FE.FEGroup))),
 
             //Leaves
-            MOON_TREE_LEAVE = ITEMS.register("moon_tree_leave", () -> new BlockItem(AllBlocks.MOON_TREE_LEAVE.get(), new Item.Properties().group(FE.FEGroup)));
+            MOON_TREE_LEAVE = ITEMS.register("moon_tree_leave", () -> new BlockItem(AllBlocks.MOON_TREE_LEAVE.get(), new Item.Properties().group(FE.FEGroup))),
+
+            // Saplings
+            MOON_SAPLING = ITEMS.register("moon_sapling", () -> new BlockItem(AllBlocks.MOON_SAPLING.get(), new Item.Properties().group(FE.FEGroup)))
+        ;
 }

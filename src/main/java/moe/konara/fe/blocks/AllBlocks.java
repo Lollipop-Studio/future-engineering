@@ -1,10 +1,12 @@
 package moe.konara.fe.blocks;
 
 import moe.konara.fe.FE;
+import moe.konara.fe.blocks.trees.MoonTree;
 import moe.konara.fe.fluids.AllFluids;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
+import net.minecraft.block.trees.OakTree;
 import net.minecraft.util.Direction;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
@@ -71,8 +73,17 @@ public class AllBlocks {
                             .sound(SoundType.STONE)
                             .hardnessAndResistance(50.0F, 5.0F)
                             .setLightLevel((lightLevel) -> 10)
+            )),
+            MOON_SAPLING = BLOCKS.register("moon_sapling", () -> new SaplingBlock(new MoonTree(),
+                    AbstractBlock.Properties
+                            .create(Material.PLANTS)
+                            .doesNotBlockMovement()
+                            .tickRandomly()
+                            .zeroHardnessAndResistance()
+                            .sound(SoundType.PLANT)
             ))
     ;
+
     //Fluid Block
     public static final RegistryObject<FlowingFluidBlock>
             WEIRD_SPRING_WATER_BLOCK = BLOCKS.register("weird_spring_water", () -> new FlowingFluidBlock(
