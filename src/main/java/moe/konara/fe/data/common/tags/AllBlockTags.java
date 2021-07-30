@@ -1,8 +1,10 @@
 package moe.konara.fe.data.common.tags;
 
 import moe.konara.fe.FE;
+import moe.konara.fe.blocks.AllBlocks;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -22,6 +24,6 @@ public class AllBlockTags extends BlockTagsProvider {
             getOrCreateBuilder(obj.tag).add(obj.instance.get());
             getOrCreateBuilder(Tags.Blocks.STORAGE_BLOCKS).addTag(obj.tag);
         });
-
+        getOrCreateBuilder(BlockTags.LOGS).add(AllBlocks.MOON_LOG.get());
     }
 }

@@ -1,20 +1,15 @@
 package moe.konara.fe.data.common.tags;
 
-import com.mojang.datafixers.TypeRewriteRule;
 import moe.konara.fe.FE;
 import moe.konara.fe.blocks.AllBlocks;
 import moe.konara.fe.items.AllItems;
 import net.minecraft.block.Block;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.item.Item;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.FluidTags;
-import net.minecraft.tags.ITag;
-import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.*;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.IForgeRegistryEntry;
-import org.lwjgl.system.CallbackI;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -22,7 +17,6 @@ import java.util.List;
 public class ModTags {
     public static final class Blocks {
         public static final class Ores {
-
             // Ore Blocks
             public static final List<TagObject<Block>> ORES = new LinkedList<>();
             public static final TagObject<Block>
@@ -38,7 +32,6 @@ public class ModTags {
         }
 
         public static final class StorageBlocks {
-
             // Storage Blocks
             public static final List<TagObject<Block>> STORAGE_BLOCKS = new LinkedList<>();
             public static final TagObject<Block>
@@ -63,7 +56,6 @@ public class ModTags {
 
     public static final class Items {
         public static final class Ores {
-
             // Ores
             public static final List<TagObject<Item>> ORES = new LinkedList<>();
             public static final TagObject<Item>
@@ -81,7 +73,6 @@ public class ModTags {
         }
 
         public static final class Ingots {
-
             // Ingots
             public static final List<TagObject<Item>> INGOTS = new LinkedList<>();
             public static final TagObject<Item>
