@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "fe:block/charged_cersei_crystal_block"
+  }
+}
