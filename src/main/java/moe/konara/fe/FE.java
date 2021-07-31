@@ -3,7 +3,7 @@ package moe.konara.fe;
 import moe.konara.fe.blocks.AllBlocks;
 import moe.konara.fe.fluids.AllFluids;
 import moe.konara.fe.items.AllItems;
-import moe.konara.fe.world.AllOreFeatures;
+import moe.konara.fe.world.feature.AllOreFeatures;
 import moe.konara.fe.world.biome.AllBiomes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

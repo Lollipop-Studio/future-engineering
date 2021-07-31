@@ -31,7 +31,7 @@ logoFile="" #optional
 # A text field displayed in the mod UI
 credits="All Forge guys." #optional
 # A text field displayed in the mod UI
-authors="suzumiya_konara, bingling_sama" #optional
+authors="suzumiya_konara, bingling_sama, luoling_thunder" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 none

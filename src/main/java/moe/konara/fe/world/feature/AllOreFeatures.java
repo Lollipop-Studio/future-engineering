@@ -1,4 +1,4 @@
-package moe.konara.fe.world;
+package moe.konara.fe.world.feature;
 
 import moe.konara.fe.blocks.AllBlocks;
 import moe.konara.fe.world.biome.AllBiomes;

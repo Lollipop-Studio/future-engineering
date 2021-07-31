@@ -1,5 +1,6 @@
 package moe.konara.fe.blocks.trees;
 
+import moe.konara.fe.world.feature.AllTreeFeatures;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
@@ -12,6 +13,6 @@ public class MoonTree extends Tree {
     @Nullable
     @Override
     protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(@NotNull Random randomIn, boolean largeHive) {
-        return null;
+        return AllTreeFeatures.MOON;
     }
 }
