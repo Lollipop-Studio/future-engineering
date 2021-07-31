@@ -18,15 +18,18 @@ public class AllBlockStates extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         for (RegistryObject<Block> object : AllBlocks.BLOCKS.getEntries()) {
+            if (object.get() instanceof RotatedPillarBlock) {
+                axisBlock((RotatedPillarBlock) object.get());
+                continue;
+            }
             if (object.get().matchesBlock(AllBlocks.WEIRD_SPRING_WATER_BLOCK.get())) {
                 ModelFile.ExistingModelFile ret = new ModelFile.ExistingModelFile(mcLoc("block/water"), this.models().existingFileHelper);
                 ret.assertExistence();
                 simpleBlock(object.get(), ret);
                 continue;
             }
-            if (object.get() instanceof RotatedPillarBlock) {
-                axisBlock((RotatedPillarBlock) object.get());
-                continue;
+            if (object.get().matchesBlock(AllBlocks.MOON_SAPLING.get())) {
+
             }
             simpleBlock(object.get());
         }

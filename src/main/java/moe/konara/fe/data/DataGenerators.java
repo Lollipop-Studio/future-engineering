@@ -24,8 +24,8 @@ public final class DataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
         if (event.includeClient()) {
-            gen.addProvider(new AllBlockStates(gen, existingFileHelper));
-            gen.addProvider(new AllItemModels(gen, existingFileHelper));
+//            gen.addProvider(new AllBlockStates(gen, existingFileHelper));
+//            gen.addProvider(new AllItemModels(gen, existingFileHelper));
         }
 
         if (event.includeServer()) {
