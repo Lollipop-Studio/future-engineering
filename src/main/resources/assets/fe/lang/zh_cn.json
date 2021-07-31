@@ -15,8 +15,8 @@
   "item.fe.weird_spring_water_bucket": "诡异温泉桶",
   "biome.fe.moonlight_biome": "月光之地",
   "block.fe.magma_obsidian": "熔岩黑曜石",
-  "block.fe.moon_log": "月光原木",
-  "block.fe.stripped_moon_log": "去皮月光原木",
-  "block.fe.moon_tree_leave": "月光树叶",
-  "block.fe.moon_sapling": "月光树苗"
+  "block.fe.skeleton_log": "枯骨原木",
+  "block.fe.stripped_skeleton_log": "去皮枯骨原木",
+  "block.fe.skeleton_tree_leave": "枯骨树叶",
+  "block.fe.skeleton_sapling": "枯骨树苗"
 }
