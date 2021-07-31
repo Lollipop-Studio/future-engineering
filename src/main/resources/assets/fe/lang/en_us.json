@@ -13,5 +13,10 @@
   "item.fe.gear_clock": "Gear Clock",
   "fluid.fe.weird_spring_water": "Weird Spring Water",
   "item.fe.weird_spring_water_bucket": "Weird Spring Water Bucket",
-  "biome.fe.moonlight_biome": "Land of moonlight"
+  "biome.fe.moonlight_biome": "Land of moonlight",
+  "block.fe.magma_obsidian": "Magma Obsidian",
+  "block.fe.moon_log": "Moon Log",
+  "block.fe.stripped_moon_log": "Stripped Moon Log",
+  "block.fe.moon_tree_leave": "Moon Tree Leave",
+  "block.fe.moon_sapling": "Moon Sapling"
 }
