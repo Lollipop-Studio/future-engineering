@@ -48,6 +48,7 @@ public class AllItems {
             MOON_TREE_LEAVE = ITEMS.register("moon_tree_leave", () -> new BlockItem(AllBlocks.MOON_TREE_LEAVE.get(), new Item.Properties().group(FE.FEGroup))),
 
             // Saplings
+            // TODO: box size doesn't match the model size...
             MOON_SAPLING = ITEMS.register("moon_sapling", () -> new BlockItem(AllBlocks.MOON_SAPLING.get(), new Item.Properties().group(FE.FEGroup)))
         ;
 }

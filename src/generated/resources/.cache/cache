@@ -5,6 +5,7 @@ e41aae97fbfe87ab9bebb987dae05fc8492738ba assets/fe/blockstates/cersei_crystal_bl
 81b75500bd5cdd1e40c2ae301774f7b450d69863 assets/fe/blockstates/goran_ore.json
 48ce73ec6324572e9d71b73e7cb00ddb8e64e906 assets/fe/blockstates/magma_obsidian.json
 368c0ab5bfc487e46cce16c46eb90da19035a5ad assets/fe/blockstates/moon_log.json
+7ce5f09a97d2bc257f988c7e54cdd6ce89555880 assets/fe/blockstates/moon_sapling.json
 4e0d61794371fa7c9039b3a5f645cac38fb2d4d4 assets/fe/blockstates/moon_tree_leave.json
 3a9836a93c69a25294d5d1d5a57c60b4241064a3 assets/fe/blockstates/stripped_moon_log.json
 a25eec65ecd6c1bf392d745f2490f5593c181131 assets/fe/blockstates/weird_spring_water.json
@@ -32,7 +33,7 @@ ad1c574fa6666876cf1a46956977a48d1e2180be assets/fe/models/item/gear_clock.json
 dcafac15a438dabd028a78577de616f4c320c421 assets/fe/models/item/goran_ore.json
 93045daa123e51ac71fe4f99c92cc11e0ad888d7 assets/fe/models/item/magma_obsidian.json
 d832156b1f2220f614a7dde37b903b98121b456c assets/fe/models/item/moon_log.json
-d4fd8707cbf368e7f0379e5e07d231126b3d74c8 assets/fe/models/item/moon_sapling.json
+2963bb9eec280450c5f7785d080c81597b797a97 assets/fe/models/item/moon_sapling.json
 f2875c887c61f9e6817e1336c8303a4c9122577b assets/fe/models/item/moon_tree_leave.json
 5497e757bb75fffccd5d050e1a2388be67554be4 assets/fe/models/item/stripped_moon_log.json
 ab1d788310c6f443643009dc5ddd7bb6e968a204 assets/fe/models/item/weird_spring_water_bucket.json

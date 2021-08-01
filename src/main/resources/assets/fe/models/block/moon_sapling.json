@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "models:dirt",
-		"1": "models:sapling_texture_1",
-		"2": "models:sapling_texture_2",
-		"particle": "models:dirt"
+		"0": "fe:block/moon_sapling/sapling_texture_0",
+		"1": "fe:block/moon_sapling/sapling_texture_1",
+		"2": "fe:block/moon_sapling/sapling_texture_2",
+		"particle": "fe:block/moon_sapling/sapling_texture_0"
 	},
 	"elements": [
 		{
