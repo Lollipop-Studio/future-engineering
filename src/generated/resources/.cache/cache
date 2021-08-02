@@ -36,6 +36,7 @@ eae56d749a4bb32d3050717ec8f55f7ea91589b3 assets/fe/models/item/skeleton_leave.js
 795d28e708ac2342f0be2cf0cccdcd0b124c1e2d assets/fe/models/item/skeleton_log.json
 7fe9865a33df832d44d2986e259e58bd3108bcaa assets/fe/models/item/skeleton_sapling.json
 048e860e2a4a3933f4ccf01872de7d6d50a9786f assets/fe/models/item/stripped_skeleton_log.json
+cad27cfcc08ced7ef4d0140e937c64d8d3429586 assets/fe/models/item/twisted_flower.json
 ab1d788310c6f443643009dc5ddd7bb6e968a204 assets/fe/models/item/weird_spring_water_bucket.json
 dcd84f39392d9f278b94ca046eaaf6b7ec7ce8da data/fe/loot_tables/blocks/aluminum_ore.json
 f1d9e39d5b1c199910eaf368fa2eb3a482287337 data/fe/loot_tables/blocks/cersei_crystal_block.json
