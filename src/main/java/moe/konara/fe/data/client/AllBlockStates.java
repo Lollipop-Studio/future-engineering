@@ -28,10 +28,10 @@ public class AllBlockStates extends BlockStateProvider {
                 simpleBlock(object.get(), ret);
                 continue;
             }
-            if (object.get().matchesBlock(AllBlocks.MOON_SAPLING.get())) {
-//                ModelFile.ExistingModelFile model = new ModelFile.ExistingModelFile(modLoc("block/moon_sapling"), this.models().existingFileHelper);
-//                model.assertExistence();
-//                simpleBlock(object.get(), model);
+            if (object.get().matchesBlock(AllBlocks.SKELETON_SAPLING.get())) {
+                ModelFile.ExistingModelFile model = new ModelFile.ExistingModelFile(modLoc("block/moon_sapling"), this.models().existingFileHelper);
+                model.assertExistence();
+                simpleBlock(object.get(), model);
                 continue;
             }
             simpleBlock(object.get());

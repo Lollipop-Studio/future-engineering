@@ -24,6 +24,6 @@ public class AllBlockTags extends BlockTagsProvider {
             getOrCreateBuilder(obj.tag).add(obj.instance.get());
             getOrCreateBuilder(Tags.Blocks.STORAGE_BLOCKS).addTag(obj.tag);
         });
-        getOrCreateBuilder(BlockTags.LOGS).add(AllBlocks.MOON_LOG.get());
+        getOrCreateBuilder(BlockTags.LOGS).add(AllBlocks.SKELETON_LOG.get());
     }
 }

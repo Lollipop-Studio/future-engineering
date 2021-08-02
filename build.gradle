@@ -96,6 +96,10 @@ repositories {
             includeGroup 'mezz.jei'
         }
     }
+    maven {
+        name 'Maven Central'
+        url 'https://repo.maven.apache.org/maven2'
+    }
 }
 
 dependencies {

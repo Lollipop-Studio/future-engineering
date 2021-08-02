@@ -20,7 +20,7 @@ public class AllItemModels extends ItemModelProvider {
     protected void registerModels() {
         ModelFile itemGenerator = getExistingFile(mcLoc("item/generated"));
         for (RegistryObject<Item> item : AllItems.ITEMS.getEntries()) {
-            if (item.get() instanceof BlockItem) {
+            if (item.get() instanceof BlockItem && !item.get().equals(AllItems.SKELETON_SAPLING.get())) {
                 withExistingParent(item.getId().getPath(), modLoc("block/" + item.getId().getPath()));
             } else {
                 builder(itemGenerator, item.getId().getPath());

@@ -9,8 +9,8 @@ import net.minecraft.world.gen.trunkplacer.StraightTrunkPlacer;
 public class AllTreeFeatures {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MOON = Feature.TREE.withConfiguration(
             new BaseTreeFeatureConfig.Builder(
-                    new SimpleBlockStateProvider(AllBlocks.MOON_LOG.get().getDefaultState()),
-                    new SimpleBlockStateProvider(AllBlocks.MOON_TREE_LEAVE.get().getDefaultState()),
+                    new SimpleBlockStateProvider(AllBlocks.SKELETON_LOG.get().getDefaultState()),
+                    new SimpleBlockStateProvider(AllBlocks.SKELETON_LEAVE.get().getDefaultState()),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)
