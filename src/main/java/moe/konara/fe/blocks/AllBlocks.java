@@ -73,6 +73,8 @@ public class AllBlocks {
                             .hardnessAndResistance(50.0F, 5.0F)
                             .setLightLevel((lightLevel) -> 10)
             )),
+
+            // TODO: box size doesn't match the model size...
             SKELETON_SAPLING = BLOCKS.register("skeleton_sapling", () -> new SaplingBlock(new SkeletonTree(),
                     AbstractBlock.Properties
                             .create(Material.PLANTS)

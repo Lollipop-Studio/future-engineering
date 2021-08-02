@@ -43,12 +43,12 @@ public class AllItems {
 
             // Others
             GEAR_CLOCK = ITEMS.register("gear_clock", () -> new Item(new Item.Properties().group(FE.FEGroup))),
+            TWISTED_FLOWER = ITEMS.register("twisted_flower", () -> new Item(new Item.Properties().group(FE.FEGroup))),
 
             //Leaves
             SKELETON_LEAVE = ITEMS.register("skeleton_leave", () -> new BlockItem(AllBlocks.SKELETON_LEAVE.get(), new Item.Properties().group(FE.FEGroup))),
 
             // Saplings
-            // TODO: box size doesn't match the model size...
             SKELETON_SAPLING = ITEMS.register("skeleton_sapling", () -> new BlockItem(AllBlocks.SKELETON_SAPLING.get(), new Item.Properties().group(FE.FEGroup)))
         ;
 }
