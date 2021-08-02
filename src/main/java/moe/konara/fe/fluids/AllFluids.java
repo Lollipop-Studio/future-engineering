@@ -24,5 +24,6 @@ public class AllFluids {
                 .color(0xFF87CEEB).density(4000).viscosity(4000))
                 .bucket(AllItems.WEIRD_SPRING_WATER_BUCKET)
                 .block(AllBlocks.WEIRD_SPRING_WATER_BLOCK)
-                .slopeFindDistance(3).explosionResistance(100F);
+                .slopeFindDistance(3).explosionResistance(100F)
+                .levelDecreasePerBlock(1).tickRate(5).slopeFindDistance(4).canMultiply();
 }
