@@ -68,8 +68,8 @@ public class AllLootTables extends ForgeLootTableProvider {
                                             .acceptFunction(ApplyBonus.uniformBonusCount(Enchantments.FORTUNE))
                                             .acceptFunction(LimitCount.func_215911_a(IntClamper.func_215843_a(1, 4)))));
             registerLootTable(AllBlocks.SKELETON_LEAVE.get(),
-                    (moon_tree_leave) ->
-                            droppingWithChancesAndSticks(moon_tree_leave, AllBlocks.SKELETON_SAPLING.get(), 0.05F, 0.0625F, 0.083333336F, 0.1F)
+                    (skeleton_leave) ->
+                            droppingRandomly(AllBlocks.SKELETON_SAPLING.get(), RandomValueRange.of(0F, 1.0F))
                     );
         }
 
