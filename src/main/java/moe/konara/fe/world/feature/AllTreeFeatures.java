@@ -7,7 +7,7 @@ import net.minecraft.world.gen.foliageplacer.BlobFoliagePlacer;
 import net.minecraft.world.gen.trunkplacer.StraightTrunkPlacer;
 
 public class AllTreeFeatures {
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MOON = Feature.TREE.withConfiguration(
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SKELETON = Feature.TREE.withConfiguration(
             new BaseTreeFeatureConfig.Builder(
                     new SimpleBlockStateProvider(AllBlocks.SKELETON_LOG.get().getDefaultState()),
                     new SimpleBlockStateProvider(AllBlocks.SKELETON_LEAVE.get().getDefaultState()),
