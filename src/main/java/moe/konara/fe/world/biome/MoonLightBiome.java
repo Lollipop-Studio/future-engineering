@@ -2,7 +2,6 @@ package moe.konara.fe.world.biome;
 
 import com.google.common.collect.ImmutableList;
 import moe.konara.fe.blocks.AllBlocks;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.registry.Registry;
@@ -78,8 +77,8 @@ public class MoonLightBiome {
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Features.DISK_CLAY);
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Features.DISK_GRAVEL);
         //withPlainGrassVegetation
-        ConfiguredFeature<BaseTreeFeatureConfig, ?> MOON_TREE = register("moon_tree", Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(AllBlocks.MOON_LOG.get().getDefaultState()), new SimpleBlockStateProvider(AllBlocks.MOON_TREE_LEAVE.get().getDefaultState()), new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3), new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
-        ConfiguredFeature<BaseTreeFeatureConfig, ?> FANCY_MOON_TREE = register("fancy_moon_tree", Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(AllBlocks.MOON_LOG.get().getDefaultState()), new SimpleBlockStateProvider(AllBlocks.MOON_TREE_LEAVE.get().getDefaultState()), new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4), new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+        ConfiguredFeature<BaseTreeFeatureConfig, ?> MOON_TREE = register("moon_tree", Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(AllBlocks.SKELETON_LOG.get().getDefaultState()), new SimpleBlockStateProvider(AllBlocks.SKELETON_LEAVE.get().getDefaultState()), new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3), new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+        ConfiguredFeature<BaseTreeFeatureConfig, ?> FANCY_MOON_TREE = register("fancy_moon_tree", Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(AllBlocks.SKELETON_LOG.get().getDefaultState()), new SimpleBlockStateProvider(AllBlocks.SKELETON_LEAVE.get().getDefaultState()), new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4), new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
         ConfiguredFeature<BaseTreeFeatureConfig, ?> FANCY_MOON_TREE_BEES = register("fancy_moon_tree_bees", Feature.TREE.withConfiguration(FANCY_MOON_TREE.getConfig().copy(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))));
         ConfiguredFeature<BaseTreeFeatureConfig, ?> MOON_TREE_BEES = register("moon_tree_bees", Feature.TREE.withConfiguration(MOON_TREE.getConfig().copy(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT))));
         ConfiguredFeature<?, ?> PLAIN_VEGETATION = register("moonlight_vegetation", Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FANCY_MOON_TREE_BEES.withChance(0.33333334F)), MOON_TREE_BEES)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.05F, 1))));

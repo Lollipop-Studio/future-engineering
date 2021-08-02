@@ -1,12 +1,11 @@
 package moe.konara.fe.blocks;
 
 import moe.konara.fe.FE;
-import moe.konara.fe.blocks.trees.MoonTree;
+import moe.konara.fe.blocks.trees.SkeletonTree;
 import moe.konara.fe.fluids.AllFluids;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
-import net.minecraft.block.trees.OakTree;
 import net.minecraft.util.Direction;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
@@ -63,8 +62,8 @@ public class AllBlocks {
                             .setRequiresTool()
                             .hardnessAndResistance(50.0F, 5.0F)
             )),
-            MOON_LOG = BLOCKS.register("moon_log", () -> createLogBlock(MaterialColor.BLUE, MaterialColor.GRAY)),
-            STRIPPED_MOON_LOG = BLOCKS.register("stripped_moon_log", () -> new RotatedPillarBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.0F).sound(SoundType.WOOD))),
+            SKELETON_LOG = BLOCKS.register("skeleton_log", () -> createLogBlock(MaterialColor.BLUE, MaterialColor.GRAY)),
+            STRIPPED_SKELETON_LOG = BLOCKS.register("stripped_skeleton_log", () -> new RotatedPillarBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.0F).sound(SoundType.WOOD))),
             MAGMA_OBSIDIAN = BLOCKS.register("magma_obsidian", () -> new MagmaObsidian(
                     AbstractBlock.Properties
                             .create(Material.ROCK)
@@ -74,7 +73,7 @@ public class AllBlocks {
                             .hardnessAndResistance(50.0F, 5.0F)
                             .setLightLevel((lightLevel) -> 10)
             )),
-            MOON_SAPLING = BLOCKS.register("moon_sapling", () -> new SaplingBlock(new MoonTree(),
+            SKELETON_SAPLING = BLOCKS.register("skeleton_sapling", () -> new SaplingBlock(new SkeletonTree(),
                     AbstractBlock.Properties
                             .create(Material.PLANTS)
                             .doesNotBlockMovement()
@@ -96,7 +95,7 @@ public class AllBlocks {
 
     //Leaves
     public static final RegistryObject<LeavesBlock>
-            MOON_TREE_LEAVE = BLOCKS.register("moon_tree_leave", () -> new LeavesBlock(
+            SKELETON_LEAVE = BLOCKS.register("skeleton_leave", () -> new LeavesBlock(
                     AbstractBlock.Properties
                             .create(Material.LEAVES)
                             .notSolid()
@@ -113,7 +112,7 @@ public class AllBlocks {
         map.setAccessible(true);
         Map<Block, Block> strip_map = (Map<Block, Block>) map.get(null);
         HashMap<Block, Block> new_map = new HashMap<>(strip_map);
-        new_map.put(AllBlocks.MOON_LOG.get(), AllBlocks.STRIPPED_MOON_LOG.get());
+        new_map.put(AllBlocks.SKELETON_LOG.get(), AllBlocks.STRIPPED_SKELETON_LOG.get());
         map.set(null, new_map);
     }
 }

@@ -35,8 +35,8 @@ public class AllItems {
             CHARGED_CERSEI_CRYSTAL = ITEMS.register("charged_cersei_crystal", () -> new Item(new Item.Properties().group(FE.FEGroup))),
 
             // Logs
-            MOON_LOG = ITEMS.register("moon_log", () -> new BlockItem(AllBlocks.MOON_LOG.get(), new Item.Properties().group(FE.FEGroup))),
-            STRIPPED_MOON_LOG = ITEMS.register("stripped_moon_log", () -> new BlockItem(AllBlocks.STRIPPED_MOON_LOG.get(), new Item.Properties().group(FE.FEGroup))),
+            SKELETON_LOG = ITEMS.register("skeleton_log", () -> new BlockItem(AllBlocks.SKELETON_LOG.get(), new Item.Properties().group(FE.FEGroup))),
+            STRIPPED_SKELETON_LOG = ITEMS.register("stripped_skeleton_log", () -> new BlockItem(AllBlocks.STRIPPED_SKELETON_LOG.get(), new Item.Properties().group(FE.FEGroup))),
 
             //FluidBucket
             WEIRD_SPRING_WATER_BUCKET = ITEMS.register("weird_spring_water_bucket", () -> new BucketItem(AllFluids.WEIRD_SPRING_WATER, new Item.Properties().group(FE.FEGroup).containerItem(BUCKET))),
@@ -45,10 +45,10 @@ public class AllItems {
             GEAR_CLOCK = ITEMS.register("gear_clock", () -> new Item(new Item.Properties().group(FE.FEGroup))),
 
             //Leaves
-            MOON_TREE_LEAVE = ITEMS.register("moon_tree_leave", () -> new BlockItem(AllBlocks.MOON_TREE_LEAVE.get(), new Item.Properties().group(FE.FEGroup))),
+            SKELETON_LEAVE = ITEMS.register("skeleton_leave", () -> new BlockItem(AllBlocks.SKELETON_LEAVE.get(), new Item.Properties().group(FE.FEGroup))),
 
             // Saplings
             // TODO: box size doesn't match the model size...
-            MOON_SAPLING = ITEMS.register("moon_sapling", () -> new BlockItem(AllBlocks.MOON_SAPLING.get(), new Item.Properties().group(FE.FEGroup)))
+            SKELETON_SAPLING = ITEMS.register("skeleton_sapling", () -> new BlockItem(AllBlocks.SKELETON_SAPLING.get(), new Item.Properties().group(FE.FEGroup)))
         ;
 }
