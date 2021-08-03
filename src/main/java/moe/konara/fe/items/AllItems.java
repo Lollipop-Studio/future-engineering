@@ -44,6 +44,7 @@ public class AllItems {
             // Others
             GEAR_CLOCK = ITEMS.register("gear_clock", () -> new Item(new Item.Properties().group(FE.FEGroup))),
             TWISTED_FLOWER = ITEMS.register("twisted_flower", () -> new Item(new Item.Properties().group(FE.FEGroup))),
+            COAGULANT = ITEMS.register("coagulant", () -> new Item(new Item.Properties().group(FE.FEGroup))),
 
             //Leaves
             SKELETON_LEAVE = ITEMS.register("skeleton_leave", () -> new BlockItem(AllBlocks.SKELETON_LEAVE.get(), new Item.Properties().group(FE.FEGroup))),

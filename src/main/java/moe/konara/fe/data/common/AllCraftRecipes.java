@@ -4,9 +4,14 @@ import moe.konara.fe.blocks.AllBlocks;
 import moe.konara.fe.items.AllItems;
 import net.minecraft.advancements.criterion.InventoryChangeTrigger;
 import net.minecraft.data.*;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.potion.PotionUtils;
+import net.minecraft.potion.Potions;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.common.data.ForgeRecipeProvider;
+import org.lwjgl.system.CallbackI;
 
 import java.util.function.Consumer;
 
