@@ -76,7 +76,7 @@ public class AllLootTables extends ForgeLootTableProvider {
                                             .acceptFunction(LimitCount.func_215911_a(IntClamper.func_215843_a(1, 4)))));
             registerLootTable(AllBlocks.SKELETON_LEAVE.get(),
                     (skeleton_leave) ->
-                            droppingWithSilkTouchOrShears(skeleton_leave, withSurvivesExplosion(skeleton_leave, withExplosionDecay(skeleton_leave, ItemLootEntry.builder(AllItems.TWISTED_FLOWER.get()).acceptFunction(SetCount.builder(RandomValueRange.of(1.0F, 2.0F)))).acceptCondition(TableBonus.builder(Enchantments.FORTUNE, 0.02F, 0.022222223F, 0.025F, 0.033333335F, 0.1F))))
+                            droppingWithSilkTouchOrShears(skeleton_leave, withSurvivesExplosion(skeleton_leave, withExplosionDecay(skeleton_leave, ItemLootEntry.builder(AllItems.TWISTED_FLOWER.get()).acceptFunction(SetCount.builder(RandomValueRange.of(1.0F, 2.0F)))).acceptCondition(TableBonus.builder(Enchantments.FORTUNE, 0.033333333F, 0.036666663F, 0.03888883F, 0.04F, 0.1F))))
                     );
         }
 
