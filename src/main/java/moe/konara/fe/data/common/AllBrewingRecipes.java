@@ -13,5 +13,6 @@ public class AllBrewingRecipes {
         BrewingRecipeRegistry.addRecipe(Ingredient.fromStacks(PotionUtils.addPotionToItemStack(new ItemStack(Items.POTION), Potions.WATER)), Ingredient.fromItems(AllItems.TWISTED_FLOWER.get()), new ItemStack(AllItems.COAGULANT.get()));
     }
     private AllBrewingRecipes(){}
+    @SuppressWarnings("EmptyMethod")
     public static void init(){}
 }
