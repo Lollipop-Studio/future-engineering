@@ -109,6 +109,8 @@ public class AllBlocks {
             AbstractBlock.Properties
                     .create(Material.LEAVES)
                     .notSolid()
+                    .hardnessAndResistance(0.2F, 0.2F)
+                    .sound(SoundType.PLANT)
     ));
 
     public static void addStripping() throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
