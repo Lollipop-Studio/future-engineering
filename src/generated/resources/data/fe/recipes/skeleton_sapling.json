@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fe:twisted_flower"
+    },
+    {
+      "item": "minecraft:dirt"
+    },
+    {
+      "item": "fe:weird_spring_water_bucket"
+    }
+  ],
+  "result": {
+    "item": "fe:skeleton_sapling"
+  }
+}

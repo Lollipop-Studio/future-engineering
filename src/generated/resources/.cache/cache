@@ -52,6 +52,7 @@ e3490970302f72b003968192599d0f678b7b5c87 data/fe/loot_tables/blocks/skeleton_lea
 3e829efe3d2798774e9bd0a43af69a1a62a33f96 data/fe/recipes/cersei_crystal_block.json
 6f1dac1b23d8e810a9997b63eab9bb8f1671430c data/fe/recipes/charged_cersei_crystal_block.json
 86b4558d68587d1d698828e025fbea2a17f513f4 data/fe/recipes/copper_ingot.json
+b1a422c289e4a6bc8a6e4b7f64618d4decbabb5a data/fe/recipes/skeleton_sapling.json
 e2cce016499037f18d1504869a256ed6d30cf5be data/forge/tags/blocks/ores.json
 6ed5306c1abfaf2f72e9e24e4596f288df060eb3 data/forge/tags/blocks/ores/aluminum.json
 42e4bb0d8142f78fb21eba72237f5ec12969dd71 data/forge/tags/blocks/ores/copper.json
