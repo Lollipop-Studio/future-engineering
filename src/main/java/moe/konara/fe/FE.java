@@ -55,7 +55,7 @@ public class FE {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        LOGGER.info("Future Engineering Mod Started!");
+        LOGGER.debug("Future Engineering Mod Started!");
     }
 
 }

@@ -7,10 +7,15 @@ import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.util.Direction;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.world.IBlockReader;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
@@ -74,16 +79,19 @@ public class AllBlocks {
                             .setLightLevel((lightLevel) -> 10)
             )),
 
-            // TODO: box size doesn't match the model size...
             SKELETON_SAPLING = BLOCKS.register("skeleton_sapling", () -> new SaplingBlock(new SkeletonTree(),
                     AbstractBlock.Properties
                             .create(Material.PLANTS)
                             .doesNotBlockMovement()
                             .tickRandomly()
                             .zeroHardnessAndResistance()
-                            .sound(SoundType.PLANT)
-            ))
-    ;
+                            .sound(SoundType.PLANT)) {
+                @Override
+                @NotNull
+                public VoxelShape getShape(@NotNull BlockState state, @NotNull IBlockReader worldIn, @NotNull BlockPos pos, @NotNull ISelectionContext context) {
+                    return Block.makeCuboidShape(0F, 0F, 0F, 16F, 16F, 16F);
+                }
+            });
 
     //Fluid Block
     public static final RegistryObject<FlowingFluidBlock>
@@ -98,9 +106,9 @@ public class AllBlocks {
     //Leaves
     public static final RegistryObject<LeavesBlock>
             SKELETON_LEAVE = BLOCKS.register("skeleton_leave", () -> new LeavesBlock(
-                    AbstractBlock.Properties
-                            .create(Material.LEAVES)
-                            .notSolid()
+            AbstractBlock.Properties
+                    .create(Material.LEAVES)
+                    .notSolid()
     ));
 
     public static void addStripping() throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {

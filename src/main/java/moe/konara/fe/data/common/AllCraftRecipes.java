@@ -4,6 +4,7 @@ import moe.konara.fe.blocks.AllBlocks;
 import moe.konara.fe.items.AllItems;
 import net.minecraft.advancements.criterion.InventoryChangeTrigger;
 import net.minecraft.data.*;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraftforge.common.data.ForgeRecipeProvider;
 
@@ -30,8 +31,11 @@ public class AllCraftRecipes extends ForgeRecipeProvider {
                 .key('I', AllItems.CHARGED_CERSEI_CRYSTAL.get())
                 .addCriterion("charged_cersei_crystal_block", InventoryChangeTrigger.Instance.forItems(AllItems.CHARGED_CERSEI_CRYSTAL.get()))
                 .build(consumer);
-//        ShapelessRecipeBuilder.shapelessRecipe(AllItems.MOON_SAPLING.get())
-//                .addIngredient()
-
+        ShapelessRecipeBuilder.shapelessRecipe(AllItems.SKELETON_SAPLING.get())
+                .addIngredient(AllItems.TWISTED_FLOWER.get())
+                .addIngredient(Items.DIRT)
+                .addIngredient(AllItems.WEIRD_SPRING_WATER_BUCKET.get())
+                .addCriterion("skeleton_sapling", InventoryChangeTrigger.Instance.forItems(AllItems.SKELETON_SAPLING.get()))
+                .build(consumer);
     }
 }
