@@ -18,5 +18,7 @@
   "block.fe.skeleton_log": "Skeleton Log",
   "block.fe.stripped_skeleton_log": "Stripped Skeleton Log",
   "block.fe.skeleton_leave": "Skeleton Leave",
-  "block.fe.skeleton_sapling": "Skeleton Sapling"
+  "block.fe.skeleton_sapling": "Skeleton Sapling",
+  "item.fe.twisted_flower": "Twisted Flower",
+  "item.fe.coagulant": "Coagulant"
 }

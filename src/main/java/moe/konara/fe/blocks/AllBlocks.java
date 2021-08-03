@@ -75,7 +75,7 @@ public class AllBlocks {
                             .harvestTool(ToolType.PICKAXE)
                             .setRequiresTool()
                             .sound(SoundType.STONE)
-                            .hardnessAndResistance(50.0F, 5.0F)
+                            .hardnessAndResistance(50.0F, 1200.0F)
                             .setLightLevel((lightLevel) -> 10)
             )),
 
