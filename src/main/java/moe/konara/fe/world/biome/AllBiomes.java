@@ -13,7 +13,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class AllBiomes {
     public static final DeferredRegister<Biome> BIOMES = DeferredRegister.create(ForgeRegistries.BIOMES, FE.ID);
 
-    public static RegistryObject<Biome>
+    public static final RegistryObject<Biome>
             MOONLIGHT = BIOMES.register("moonlight_biome", MoonLightBiome::make);
 
     public static void registerBiomes(FMLCommonSetupEvent event) {

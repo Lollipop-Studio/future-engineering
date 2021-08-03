@@ -123,8 +123,8 @@ public class ModTags {
     }
 
     public static class TagObject<T extends IForgeRegistryEntry<? super T>> {
-        public ITag.INamedTag<T> tag;
-        public RegistryObject<T> instance;
+        public final ITag.INamedTag<T> tag;
+        public final RegistryObject<T> instance;
 
         public TagObject(ITag.INamedTag<T> tag, RegistryObject<T> instance) {
             this.tag = tag;

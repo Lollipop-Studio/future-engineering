@@ -9,6 +9,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Random;
 
@@ -18,7 +19,7 @@ public class MagmaObsidian extends Block {
     }
 
     @OnlyIn(Dist.CLIENT)
-    public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
+    public void animateTick(@NotNull BlockState stateIn, @NotNull World worldIn, @NotNull BlockPos pos, Random rand) {
         if (rand.nextInt(5) == 0) {
             Direction direction = Direction.getRandomDirection(rand);
             if (direction != Direction.UP) {

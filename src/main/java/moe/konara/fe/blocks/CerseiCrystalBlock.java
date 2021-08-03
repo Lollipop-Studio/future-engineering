@@ -4,6 +4,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.IceBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.NotNull;
 
 public class CerseiCrystalBlock extends IceBlock {
     public CerseiCrystalBlock(Properties properties) {
@@ -16,7 +17,7 @@ public class CerseiCrystalBlock extends IceBlock {
     }
 
     @Override
-    protected void turnIntoWater(BlockState blockState, World world, BlockPos pos) {
+    protected void turnIntoWater(@NotNull BlockState blockState, @NotNull World world, @NotNull BlockPos pos) {
 
     }
 }

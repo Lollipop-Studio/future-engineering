@@ -26,6 +26,7 @@ ebfaff5e32c74899974aa9646f7b91729c148f15 assets/fe/models/block/goran_ore.json
 139db388f9e72b455907fcb524b941561c376944 assets/fe/models/item/cersei_crystal_block.json
 f1350bcc0866c35b27f4a1389bec90b8b5eaf7a3 assets/fe/models/item/charged_cersei_crystal.json
 442e08b9c849fbb0f6cd13e10ac0e443e1468794 assets/fe/models/item/charged_cersei_crystal_block.json
+65bdf04249757871f4e2d639a9a8f7daf1aba5f8 assets/fe/models/item/coagulant.json
 b875a365221657d9fcf38377a37b373dfc8e48eb assets/fe/models/item/copper_ingot.json
 410741e96abe38c3288f9599b034166e7e994ff6 assets/fe/models/item/copper_ore.json
 ad1c574fa6666876cf1a46956977a48d1e2180be assets/fe/models/item/gear_clock.json
@@ -44,7 +45,7 @@ f1d9e39d5b1c199910eaf368fa2eb3a482287337 data/fe/loot_tables/blocks/cersei_cryst
 b057c83a5ca6effa81310babb11b3e9d90c82b3b data/fe/loot_tables/blocks/copper_ore.json
 5a5b4534646f80b8d566722903e9962b4e45f7d8 data/fe/loot_tables/blocks/goran_ore.json
 87f53a748502eaf04236a53b5b46f7597fbaea8e data/fe/loot_tables/blocks/magma_obsidian.json
-e3490970302f72b003968192599d0f678b7b5c87 data/fe/loot_tables/blocks/skeleton_leave.json
+7f1b450f4f85ad71571950e428fb8498a2b3ed67 data/fe/loot_tables/blocks/skeleton_leave.json
 1197a6c3b51e6788e7297de7418101c4b663244c data/fe/loot_tables/blocks/skeleton_log.json
 6f1e6d2b37000d6002f199967f594e455dc6a043 data/fe/loot_tables/blocks/skeleton_sapling.json
 2de35b41500c1f0f9a4c7d284f1beea81a33d42f data/fe/loot_tables/blocks/stripped_skeleton_log.json

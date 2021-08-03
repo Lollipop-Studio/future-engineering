@@ -4,7 +4,6 @@ import moe.konara.fe.FE;
 import moe.konara.fe.fluids.AllFluids;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.FluidTagsProvider;
-import net.minecraft.fluid.FlowingFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.tags.FluidTags;
 import net.minecraftforge.common.data.ExistingFileHelper;
