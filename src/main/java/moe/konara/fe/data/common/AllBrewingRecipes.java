@@ -10,7 +10,7 @@ import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 
 public class AllBrewingRecipes {
     static {
-        BrewingRecipeRegistry.addRecipe(Ingredient.fromStacks(PotionUtils.addPotionToItemStack(new ItemStack(Items.POTION), Potions.WATER)), Ingredient.fromItems(AllItems.TWISTED_FLOWER.get()), new ItemStack(AllItems.COAGULANT.get()));
+        BrewingRecipeRegistry.addRecipe(Ingredient.fromStacks(PotionUtils.addPotionToItemStack(new ItemStack(Items.POTION), Potions.MUNDANE)), Ingredient.fromItems(AllItems.TWISTED_FLOWER.get()), new ItemStack(AllItems.COAGULANT.get()));
     }
     private AllBrewingRecipes(){}
     @SuppressWarnings("EmptyMethod")
