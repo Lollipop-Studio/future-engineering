@@ -18,6 +18,12 @@ public class AllOreFeatures {
     public static void generateOres(final BiomeLoadingEvent event) {
         switch (event.getCategory()) {
             case NETHER:
+                //MagmaBlock
+                event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+                        generateOre(OreFeatureConfig.FillerBlockType.BASE_STONE_NETHER,
+                                AllBlocks.MAGMA_OBSIDIAN.get().getDefaultState(),
+                                    8,1,33,15));
+                break;
             case THEEND:
                 break;
             default:
