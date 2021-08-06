@@ -39,7 +39,7 @@ public class AllItems {
             STRIPPED_SKELETON_LOG = ITEMS.register("stripped_skeleton_log", () -> new BlockItem(AllBlocks.STRIPPED_SKELETON_LOG.get(), new Item.Properties().group(FE.FEGroup))),
 
             //FluidBucket
-            WEIRD_SPRING_WATER_BUCKET = ITEMS.register("weird_spring_water_bucket", () -> new BucketItem(AllFluids.WEIRD_SPRING_WATER, new Item.Properties().group(FE.FEGroup).containerItem(BUCKET))),
+            WEIRD_SPRING_WATER_BUCKET = ITEMS.register("weird_spring_water_bucket", () -> new BucketItem(AllFluids.WEIRD_SPRING_WATER, new Item.Properties().group(FE.FEGroup).containerItem(BUCKET).maxStackSize(1))),
 
             // Others
             GEAR_CLOCK = ITEMS.register("gear_clock", () -> new Item(new Item.Properties().group(FE.FEGroup))),
