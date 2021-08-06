@@ -13,6 +13,6 @@ public class SkeletonTree extends Tree {
     @Nullable
     @Override
     protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(@NotNull Random randomIn, boolean largeHive) {
-        return AllTreeFeatures.SKELETON;
+        return AllTreeFeatures.SKELETON_TREE;
     }
 }
